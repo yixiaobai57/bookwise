@@ -5,6 +5,7 @@ import { useParams } from "next/navigation";
 import { motion } from "framer-motion";
 import { BookRecommendation } from "@/lib/types";
 import { CoverageCircle } from "@/components/CoverageCircle";
+import { BookCover } from "@/components/BookCover";
 import { getCoverageLabel } from "@/lib/coverage";
 import { loadVocabulary } from "@/lib/storage";
 
@@ -102,19 +103,13 @@ export default function BookDetailPage() {
           </a>
 
           <div className="bg-card rounded-3xl shadow-sm border border-border overflow-hidden">
-            <div className="h-64 bg-gradient-to-br from-primary-start/20 to-primary-end/20 flex items-center justify-center relative overflow-hidden">
-              {book.coverUrl ? (
-                <img
-                  src={book.coverUrl}
-                  alt={book.title}
-                  className="w-full h-full object-cover"
-                  onError={(e) => {
-                    e.currentTarget.style.display = "none";
-                  }}
-                />
-              ) : (
-                <div className="text-8xl">📖</div>
-              )}
+            <div className="h-64 relative overflow-hidden">
+              <BookCover
+                title={book.title}
+                author={book.author}
+                category={book.category}
+                className="h-64"
+              />
             </div>
 
             <div className="p-8 md:p-12">

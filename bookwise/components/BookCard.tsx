@@ -3,31 +3,12 @@
 import { motion } from "framer-motion";
 import { BookRecommendation } from "@/lib/types";
 import { CoverageCircle } from "./CoverageCircle";
+import { BookCover } from "./BookCover";
 
 interface BookCardProps {
-  book: BookRecommendation & { coverUrl?: string | null };
+  book: BookRecommendation;
   index?: number;
 }
-
-const categoryGradients: Record<string, string> = {
-  小说: "from-blue-400 to-indigo-500",
-  科幻: "from-purple-400 to-pink-500",
-  历史: "from-amber-400 to-orange-500",
-  哲学: "from-emerald-400 to-teal-500",
-  传记: "from-rose-400 to-pink-500",
-  科普: "from-cyan-400 to-blue-500",
-  教材: "from-sky-400 to-cyan-500",
-};
-
-const categoryIcons: Record<string, string> = {
-  小说: "📖",
-  科幻: "🚀",
-  历史: "🏛️",
-  哲学: "💭",
-  传记: "👤",
-  科普: "🔬",
-  教材: "📝",
-};
 
 export function BookCard({ book, index = 0 }: BookCardProps) {
   const difficultyColors: Record<string, string> = {
@@ -38,10 +19,6 @@ export function BookCard({ book, index = 0 }: BookCardProps) {
     雅思: "bg-rose-100 text-rose-700 dark:bg-rose-900/30 dark:text-rose-300",
   };
 
-  const gradient =
-    categoryGradients[book.category] || "from-gray-400 to-gray-500";
-  const icon = categoryIcons[book.category] || "📖";
-
   return (
     <motion.a
       href={`/book/${book.id}`}
@@ -51,24 +28,13 @@ export function BookCard({ book, index = 0 }: BookCardProps) {
       whileHover={{ y: -6 }}
       className="block bg-card rounded-2xl shadow-sm border border-border hover:shadow-lg transition-all duration-300 overflow-hidden group"
     >
-      <div
-        className={`h-48 bg-gradient-to-br ${gradient} flex items-center justify-center relative overflow-hidden`}
-      >
-        {book.coverUrl ? (
-          <img
-            src={book.coverUrl}
-            alt={book.title}
-            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-            onError={(e) => {
-              e.currentTarget.style.display = "none";
-            }}
-          />
-        ) : (
-          <div className="text-6xl group-hover:scale-110 transition-transform duration-300">
-            {icon}
-          </div>
-        )}
-        <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300" />
+      <div className="h-48 relative overflow-hidden">
+        <BookCover
+          title={book.title}
+          author={book.author}
+          category={book.category}
+          className="h-48 group-hover:scale-105 transition-transform duration-300"
+        />
       </div>
 
       <div className="p-6">
