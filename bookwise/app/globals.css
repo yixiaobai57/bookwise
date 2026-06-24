@@ -1,15 +1,31 @@
 @import "tailwindcss";
 
 :root {
-  --background: #fafafa;
-  --foreground: #1a1a2e;
+  --background: #f8fafc;
+  --foreground: #0f172a;
   --card: #ffffff;
-  --muted: #6b7280;
-  --primary-start: #6366f1;
-  --primary-end: #a855f7;
+  --muted: #64748b;
+  --primary-start: #0ea5e9;
+  --primary-end: #06b6d4;
   --coverage-high: #22c55e;
   --coverage-mid: #eab308;
   --coverage-low: #ef4444;
+  --border: #e2e8f0;
+  --accent: #f0f9ff;
+}
+
+[data-theme="dark"] {
+  --background: #0f172a;
+  --foreground: #f1f5f9;
+  --card: #1e293b;
+  --muted: #94a3b8;
+  --primary-start: #38bdf8;
+  --primary-end: #22d3ee;
+  --coverage-high: #4ade80;
+  --coverage-mid: #facc15;
+  --coverage-low: #f87171;
+  --border: #334155;
+  --accent: #1e3a5f;
 }
 
 @theme inline {
@@ -22,6 +38,8 @@
   --color-coverage-high: var(--coverage-high);
   --color-coverage-mid: var(--coverage-mid);
   --color-coverage-low: var(--coverage-low);
+  --color-border: var(--border);
+  --color-accent: var(--accent);
   --font-sans: var(--font-inter);
 }
 
@@ -29,9 +47,9 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-inter), "Noto Sans SC", Arial, Helvetica, sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Gradient text utility */
 .text-gradient {
   background: linear-gradient(135deg, var(--primary-start), var(--primary-end));
   -webkit-background-clip: text;
@@ -39,7 +57,6 @@ body {
   background-clip: text;
 }
 
-/* Gradient button utility */
 .btn-gradient {
   background: linear-gradient(135deg, var(--primary-start), var(--primary-end));
   color: white;
@@ -49,5 +66,21 @@ body {
 
 .btn-gradient:hover {
   transform: scale(1.02);
-  box-shadow: 0 8px 25px rgba(99, 102, 241, 0.3);
+  box-shadow: 0 8px 25px rgba(14, 165, 233, 0.3);
+}
+
+.hero-bg {
+  background:
+    radial-gradient(ellipse at 20% 50%, rgba(14, 165, 233, 0.08) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 20%, rgba(6, 182, 212, 0.06) 0%, transparent 50%),
+    radial-gradient(ellipse at 50% 80%, rgba(14, 165, 233, 0.04) 0%, transparent 50%),
+    var(--background);
+}
+
+[data-theme="dark"] .hero-bg {
+  background:
+    radial-gradient(ellipse at 20% 50%, rgba(56, 189, 248, 0.1) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 20%, rgba(34, 211, 238, 0.08) 0%, transparent 50%),
+    radial-gradient(ellipse at 50% 80%, rgba(56, 189, 248, 0.05) 0%, transparent 50%),
+    var(--background);
 }

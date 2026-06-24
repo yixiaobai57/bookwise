@@ -14,13 +14,28 @@ export const metadata: Metadata = {
     "AI 智能分析英语词汇覆盖率，每次为你推荐 80% 词汇覆盖率的全英文书籍",
 };
 
+const themeScript = `
+  (function() {
+    try {
+      var theme = localStorage.getItem('bookwise-theme');
+      if (!theme) {
+        theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      }
+      document.documentElement.setAttribute('data-theme', theme);
+    } catch (e) {}
+  })()
+`;
+
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="zh-CN" className={`${inter.variable} h-full antialiased`}>
+    <html lang="zh-CN" className={`${inter.variable} h-full antialiased`} suppressHydrationWarning>
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: themeScript }} />
+      </head>
       <body className="min-h-full flex flex-col bg-background text-foreground">
         <Navbar />
         <main className="flex-1">{children}</main>

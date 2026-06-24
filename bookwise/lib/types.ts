@@ -7,6 +7,7 @@ export interface Book {
   difficulty: string;
   wordCount: number;
   gutenbergId: number;
+  coverUrl?: string | null;
   uniqueWords?: string[];
   wordFrequencyDistribution: Record<string, number>;
 }
@@ -46,6 +47,7 @@ export interface BookRecommendation {
   category: string;
   difficulty: string;
   wordCount: number;
+  coverUrl?: string | null;
 }
 
 export interface TestAnswer {

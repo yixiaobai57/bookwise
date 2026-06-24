@@ -79,7 +79,7 @@ function FilterPill({
       className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
         active
           ? "bg-gradient-to-r from-primary-start to-primary-end text-white shadow-sm"
-          : "bg-white text-muted border border-gray-200 hover:border-gray-300"
+          : "bg-card text-muted border border-border hover:border-primary-start/30"
       }`}
     >
       {label}

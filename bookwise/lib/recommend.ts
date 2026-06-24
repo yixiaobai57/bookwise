@@ -20,6 +20,7 @@ export function getRecommendations(
     category: book.category,
     difficulty: book.difficulty,
     wordCount: book.wordCount,
+    coverUrl: book.coverUrl,
   }));
 
   let filtered = results.filter((book) => book.coverage >= targetCoverage);
@@ -46,6 +47,7 @@ export function getAllRecommendations(
     category: book.category,
     difficulty: book.difficulty,
     wordCount: book.wordCount,
+    coverUrl: book.coverUrl,
   }));
 
   return results.sort((a, b) => b.coverage - a.coverage);

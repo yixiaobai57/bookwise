@@ -1,8 +1,8 @@
 import { CocabEntry, TestSession, TestAnswer } from "./types";
 
-const BAND_SIZE = 200;
+const BAND_SIZE = 2000;
 const TOTAL_BANDS = 10;
-const INITIAL_BAND = 3;
+const INITIAL_BAND = 2;
 const MAX_QUESTIONS = 35;
 const CONSECUTIVE_CORRECT_TO_MOVE_UP = 3;
 const CONSECUTIVE_WRONG_TO_MOVE_DOWN = 2;
@@ -24,45 +24,38 @@ export function selectNextWord(
   if (session.answers.length >= MAX_QUESTIONS) return null;
 
   const seenWords = new Set(session.answers.map((a) => a.word.toLowerCase()));
-  const bandStart = (session.currentBand - 1) * BAND_SIZE;
-  const bandEnd = session.currentBand * BAND_SIZE;
 
-  const bandWords = cocaList.filter(
-    (entry) =>
-      entry.rank > bandStart &&
-      entry.rank <= bandEnd &&
-      !seenWords.has(entry.word.toLowerCase())
-  );
-
-  if (bandWords.length === 0) {
-    return findWordFromAdjacentBand(session, cocaList, seenWords);
+  const wordsInBand = getWordsInBand(session.currentBand, cocaList, seenWords);
+  if (wordsInBand.length > 0) {
+    return wordsInBand[Math.floor(Math.random() * wordsInBand.length)];
   }
 
-  const randomIndex = Math.floor(Math.random() * bandWords.length);
-  return bandWords[randomIndex];
-}
-
-function findWordFromAdjacentBand(
-  session: TestSession,
-  cocaList: CocabEntry[],
-  seenWords: Set<string>
-): CocabEntry | null {
   for (let offset = 1; offset <= TOTAL_BANDS; offset++) {
     for (const dir of [1, -1]) {
       const band = session.currentBand + offset * dir;
       if (band < 1 || band > TOTAL_BANDS) continue;
-      const start = (band - 1) * BAND_SIZE;
-      const end = band * BAND_SIZE;
-      const words = cocaList.filter(
-        (e) =>
-          e.rank > start && e.rank <= end && !seenWords.has(e.word.toLowerCase())
-      );
+      const words = getWordsInBand(band, cocaList, seenWords);
       if (words.length > 0) {
         return words[Math.floor(Math.random() * words.length)];
       }
     }
   }
   return null;
+}
+
+function getWordsInBand(
+  band: number,
+  cocaList: CocabEntry[],
+  seenWords: Set<string>
+): CocabEntry[] {
+  const bandStart = (band - 1) * BAND_SIZE;
+  const bandEnd = band * BAND_SIZE;
+  return cocaList.filter(
+    (entry) =>
+      entry.rank > bandStart &&
+      entry.rank <= bandEnd &&
+      !seenWords.has(entry.word.toLowerCase())
+  );
 }
 
 export function processAnswer(
@@ -119,36 +112,59 @@ export function estimateVocabularySize(
   if (knownRanks.length === 0) {
     return { size: 1000, confidence: 0.5 };
   }
-  if (unknownRanks.length === 0) {
-    const maxKnownRank = Math.max(...knownRanks);
-    return { size: Math.min(maxKnownRank * 2, 20000), confidence: 0.6 };
-  }
 
-  const highestKnownRank = Math.max(...knownRanks);
-  const lowestUnknownRank = Math.min(...unknownRanks);
+  const highestKnownRank = knownRanks.length > 0 ? Math.max(...knownRanks) : 0;
+  const lowestUnknownRank = unknownRanks.length > 0 ? Math.min(...unknownRanks) : 20000;
 
   let estimatedSize: number;
-  if (highestKnownRank < lowestUnknownRank) {
+
+  if (unknownRanks.length === 0) {
+    const allKnown = answers.length > 0;
+    if (allKnown) {
+      const maxBand = Math.ceil(highestKnownRank / BAND_SIZE);
+      estimatedSize = maxBand * BAND_SIZE + BAND_SIZE;
+      estimatedSize = Math.max(estimatedSize, 8000);
+    } else {
+      estimatedSize = 3000;
+    }
+  } else if (highestKnownRank < lowestUnknownRank) {
     estimatedSize = Math.round((highestKnownRank + lowestUnknownRank) / 2);
   } else {
     const knownRatio = knownRanks.length / answers.length;
-    estimatedSize = Math.round(highestKnownRank * (0.5 + knownRatio * 0.5));
+    const boundaryEstimate = Math.round(
+      highestKnownRank * (0.5 + knownRatio * 0.5)
+    );
+    estimatedSize = boundaryEstimate;
   }
 
   estimatedSize = Math.max(1000, Math.min(estimatedSize, 20000));
 
-  const variance = Math.abs(highestKnownRank - lowestUnknownRank);
-  const confidence = Math.max(0.5, Math.min(0.95, 1 - variance / 20000));
+  const totalAnswers = knownRanks.length + unknownRanks.length;
+  const knownRatio = knownRanks.length / totalAnswers;
+  const hasUnknown = unknownRanks.length > 0;
+  const variance = hasUnknown
+    ? Math.abs(highestKnownRank - lowestUnknownRank)
+    : 0;
 
-  return { size: estimatedSize, confidence: Math.round(confidence * 100) / 100 };
+  let confidence: number;
+  if (!hasUnknown) {
+    confidence = Math.min(0.85, 0.6 + (totalAnswers / MAX_QUESTIONS) * 0.25);
+  } else {
+    confidence = Math.max(0.5, Math.min(0.95, 1 - variance / 20000));
+  }
+
+  return {
+    size: Math.round(estimatedSize),
+    confidence: Math.round(confidence * 100) / 100,
+  };
 }
 
 export function isTestComplete(session: TestSession): boolean {
   if (session.answers.length >= MAX_QUESTIONS) return true;
 
-  if (session.bandHistory.length >= 4) {
-    const lastFour = session.bandHistory.slice(-4);
-    if (lastFour.every((b) => b === lastFour[0])) {
+  if (session.bandHistory.length >= 6) {
+    const lastSix = session.bandHistory.slice(-6);
+    if (lastSix.every((b) => b === lastSix[0])) {
       return true;
     }
   }

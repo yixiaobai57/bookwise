@@ -5,18 +5,42 @@ import { BookRecommendation } from "@/lib/types";
 import { CoverageCircle } from "./CoverageCircle";
 
 interface BookCardProps {
-  book: BookRecommendation;
+  book: BookRecommendation & { coverUrl?: string | null };
   index?: number;
 }
 
+const categoryGradients: Record<string, string> = {
+  小说: "from-blue-400 to-indigo-500",
+  科幻: "from-purple-400 to-pink-500",
+  历史: "from-amber-400 to-orange-500",
+  哲学: "from-emerald-400 to-teal-500",
+  传记: "from-rose-400 to-pink-500",
+  科普: "from-cyan-400 to-blue-500",
+  教材: "from-sky-400 to-cyan-500",
+};
+
+const categoryIcons: Record<string, string> = {
+  小说: "📖",
+  科幻: "🚀",
+  历史: "🏛️",
+  哲学: "💭",
+  传记: "👤",
+  科普: "🔬",
+  教材: "📝",
+};
+
 export function BookCard({ book, index = 0 }: BookCardProps) {
   const difficultyColors: Record<string, string> = {
-    四级: "bg-blue-100 text-blue-700",
-    六级: "bg-purple-100 text-purple-700",
-    考研: "bg-orange-100 text-orange-700",
-    托福: "bg-green-100 text-green-700",
-    雅思: "bg-red-100 text-red-700",
+    四级: "bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300",
+    六级: "bg-cyan-100 text-cyan-700 dark:bg-cyan-900/30 dark:text-cyan-300",
+    考研: "bg-amber-100 text-amber-700 dark:bg-amber-900/30 dark:text-amber-300",
+    托福: "bg-emerald-100 text-emerald-700 dark:bg-emerald-900/30 dark:text-emerald-300",
+    雅思: "bg-rose-100 text-rose-700 dark:bg-rose-900/30 dark:text-rose-300",
   };
+
+  const gradient =
+    categoryGradients[book.category] || "from-gray-400 to-gray-500";
+  const icon = categoryIcons[book.category] || "📖";
 
   return (
     <motion.a
@@ -24,17 +48,35 @@ export function BookCard({ book, index = 0 }: BookCardProps) {
       initial={{ opacity: 0, y: 30 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.4, delay: index * 0.1, ease: "easeOut" }}
-      whileHover={{ y: -4 }}
-      className="block bg-card rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow overflow-hidden"
+      whileHover={{ y: -6 }}
+      className="block bg-card rounded-2xl shadow-sm border border-border hover:shadow-lg transition-all duration-300 overflow-hidden group"
     >
-      <div className="h-48 bg-gradient-to-br from-indigo-100 to-purple-100 flex items-center justify-center">
-        <div className="text-4xl">📖</div>
+      <div
+        className={`h-48 bg-gradient-to-br ${gradient} flex items-center justify-center relative overflow-hidden`}
+      >
+        {book.coverUrl ? (
+          <img
+            src={book.coverUrl}
+            alt={book.title}
+            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+            onError={(e) => {
+              e.currentTarget.style.display = "none";
+            }}
+          />
+        ) : (
+          <div className="text-6xl group-hover:scale-110 transition-transform duration-300">
+            {icon}
+          </div>
+        )}
+        <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300" />
       </div>
 
       <div className="p-6">
         <div className="flex items-start justify-between mb-3">
           <div className="flex-1 min-w-0 mr-3">
-            <h3 className="font-semibold text-lg truncate">{book.title}</h3>
+            <h3 className="font-semibold text-lg truncate group-hover:text-primary-start transition-colors">
+              {book.title}
+            </h3>
             <p className="text-muted text-sm truncate">{book.titleCN}</p>
           </div>
           <CoverageCircle coverage={book.coverage} size={56} />
@@ -50,7 +92,7 @@ export function BookCard({ book, index = 0 }: BookCardProps) {
           >
             {book.difficulty}
           </span>
-          <span className="px-2 py-1 rounded-full text-xs font-medium bg-gray-100 text-gray-700">
+          <span className="px-2 py-1 rounded-full text-xs font-medium bg-accent text-muted">
             {book.category}
           </span>
           <span className="text-xs text-muted ml-auto">

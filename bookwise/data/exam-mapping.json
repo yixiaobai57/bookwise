@@ -3,6 +3,7 @@
     "exam": "CET-4",
     "label": "四级",
     "scoreRanges": [
+      { "min": 0, "max": 425, "vocabMin": 2000, "vocabMax": 4000 },
       { "min": 425, "max": 550, "vocabMin": 4000, "vocabMax": 5500 },
       { "min": 550, "max": 710, "vocabMin": 5500, "vocabMax": 7000 }
     ]
@@ -11,6 +12,7 @@
     "exam": "CET-6",
     "label": "六级",
     "scoreRanges": [
+      { "min": 0, "max": 425, "vocabMin": 3500, "vocabMax": 5500 },
       { "min": 425, "max": 550, "vocabMin": 5500, "vocabMax": 7000 },
       { "min": 550, "max": 710, "vocabMin": 7000, "vocabMax": 9000 }
     ]
@@ -19,6 +21,7 @@
     "exam": "Graduate",
     "label": "考研",
     "scoreRanges": [
+      { "min": 0, "max": 50, "vocabMin": 3000, "vocabMax": 5500 },
       { "min": 50, "max": 70, "vocabMin": 5500, "vocabMax": 7500 },
       { "min": 70, "max": 100, "vocabMin": 7500, "vocabMax": 10000 }
     ]
@@ -27,14 +30,19 @@
     "exam": "TOEFL",
     "label": "托福",
     "scoreRanges": [
-      { "min": 80, "max": 100, "vocabMin": 8000, "vocabMax": 12000 }
+      { "min": 0, "max": 60, "vocabMin": 4000, "vocabMax": 6000 },
+      { "min": 60, "max": 80, "vocabMin": 6000, "vocabMax": 8000 },
+      { "min": 80, "max": 120, "vocabMin": 8000, "vocabMax": 15000 }
     ]
   },
   {
     "exam": "IELTS",
     "label": "雅思",
     "scoreRanges": [
-      { "min": 6.0, "max": 7.5, "vocabMin": 7000, "vocabMax": 10000 }
+      { "min": 0, "max": 5.0, "vocabMin": 3000, "vocabMax": 5000 },
+      { "min": 5.0, "max": 6.0, "vocabMin": 5000, "vocabMax": 7000 },
+      { "min": 6.0, "max": 7.5, "vocabMin": 7000, "vocabMax": 10000 },
+      { "min": 7.5, "max": 9.0, "vocabMin": 10000, "vocabMax": 15000 }
     ]
   }
 ]
