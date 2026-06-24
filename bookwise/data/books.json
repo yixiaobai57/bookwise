@@ -1,0 +1,812 @@
+[
+  {
+    "id": "pride-and-prejudice",
+    "title": "Pride and Prejudice",
+    "titleCN": "傲慢与偏见",
+    "author": "Jane Austen",
+    "category": "小说",
+    "difficulty": "四级",
+    "wordCount": 122000,
+    "gutenbergId": 1342
+  },
+  {
+    "id": "alice-in-wonderland",
+    "title": "Alice's Adventures in Wonderland",
+    "titleCN": "爱丽丝梦游仙境",
+    "author": "Lewis Carroll",
+    "category": "小说",
+    "difficulty": "四级",
+    "wordCount": 27000,
+    "gutenbergId": 11
+  },
+  {
+    "id": "the-adventures-of-tom-sawyer",
+    "title": "The Adventures of Tom Sawyer",
+    "titleCN": "汤姆·索亚历险记",
+    "author": "Mark Twain",
+    "category": "小说",
+    "difficulty": "四级",
+    "wordCount": 71000,
+    "gutenbergId": 74
+  },
+  {
+    "id": "a-christmas-carol",
+    "title": "A Christmas Carol",
+    "titleCN": "圣诞颂歌",
+    "author": "Charles Dickens",
+    "category": "小说",
+    "difficulty": "四级",
+    "wordCount": 28000,
+    "gutenbergId": 46
+  },
+  {
+    "id": "the-wizard-of-oz",
+    "title": "The Wonderful Wizard of Oz",
+    "titleCN": "绿野仙踪",
+    "author": "L. Frank Baum",
+    "category": "小说",
+    "difficulty": "四级",
+    "wordCount": 40000,
+    "gutenbergId": 55
+  },
+  {
+    "id": "peter-pan",
+    "title": "Peter Pan",
+    "titleCN": "彼得·潘",
+    "author": "J. M. Barrie",
+    "category": "小说",
+    "difficulty": "四级",
+    "wordCount": 47000,
+    "gutenbergId": 16
+  },
+  {
+    "id": "the-jungle-book",
+    "title": "The Jungle Book",
+    "titleCN": "丛林之书",
+    "author": "Rudyard Kipling",
+    "category": "小说",
+    "difficulty": "四级",
+    "wordCount": 58000,
+    "gutenbergId": 236
+  },
+  {
+    "id": "frankenstein",
+    "title": "Frankenstein",
+    "titleCN": "弗兰肯斯坦",
+    "author": "Mary Shelley",
+    "category": "科幻",
+    "difficulty": "六级",
+    "wordCount": 75000,
+    "gutenbergId": 84
+  },
+  {
+    "id": "the-time-machine",
+    "title": "The Time Machine",
+    "titleCN": "时间机器",
+    "author": "H. G. Wells",
+    "category": "科幻",
+    "difficulty": "六级",
+    "wordCount": 32000,
+    "gutenbergId": 35
+  },
+  {
+    "id": "the-war-of-the-worlds",
+    "title": "The War of the Worlds",
+    "titleCN": "世界大战",
+    "author": "H. G. Wells",
+    "category": "科幻",
+    "difficulty": "六级",
+    "wordCount": 60000,
+    "gutenbergId": 36
+  },
+  {
+    "id": "twenty-thousand-leagues",
+    "title": "Twenty Thousand Leagues Under the Seas",
+    "titleCN": "海底两万里",
+    "author": "Jules Verne",
+    "category": "科幻",
+    "difficulty": "六级",
+    "wordCount": 100000,
+    "gutenbergId": 164
+  },
+  {
+    "id": "journey-to-the-center-of-the-earth",
+    "title": "A Journey to the Centre of the Earth",
+    "titleCN": "地心游记",
+    "author": "Jules Verne",
+    "category": "科幻",
+    "difficulty": "六级",
+    "wordCount": 60000,
+    "gutenbergId": 18857
+  },
+  {
+    "id": "dracula",
+    "title": "Dracula",
+    "titleCN": "德古拉",
+    "author": "Bram Stoker",
+    "category": "科幻",
+    "difficulty": "六级",
+    "wordCount": 160000,
+    "gutenbergId": 345
+  },
+  {
+    "id": "the-odyssey",
+    "title": "The Odyssey",
+    "titleCN": "奥德赛",
+    "author": "Homer",
+    "category": "历史",
+    "difficulty": "考研",
+    "wordCount": 120000,
+    "gutenbergId": 1727
+  },
+  {
+    "id": "the-art-of-war",
+    "title": "The Art of War",
+    "titleCN": "孙子兵法",
+    "author": "Sun Tzu",
+    "category": "历史",
+    "difficulty": "六级",
+    "wordCount": 18000,
+    "gutenbergId": 132
+  },
+  {
+    "id": "the-history-of-the-decline-and-fall",
+    "title": "The History of the Decline and Fall of the Roman Empire",
+    "titleCN": "罗马帝国衰亡史",
+    "author": "Edward Gibbon",
+    "category": "历史",
+    "difficulty": "托福",
+    "wordCount": 350000,
+    "gutenbergId": 731
+  },
+  {
+    "id": "a-tale-of-two-cities",
+    "title": "A Tale of Two Cities",
+    "titleCN": "双城记",
+    "author": "Charles Dickens",
+    "category": "历史",
+    "difficulty": "六级",
+    "wordCount": 135000,
+    "gutenbergId": 98
+  },
+  {
+    "id": "the-last-of-the-mohicans",
+    "title": "The Last of the Mohicans",
+    "titleCN": "最后的莫希干人",
+    "author": "James Fenimore Cooper",
+    "category": "历史",
+    "difficulty": "考研",
+    "wordCount": 140000,
+    "gutenbergId": 947
+  },
+  {
+    "id": "the-republic",
+    "title": "The Republic",
+    "titleCN": "理想国",
+    "author": "Plato",
+    "category": "哲学",
+    "difficulty": "托福",
+    "wordCount": 120000,
+    "gutenbergId": 1497
+  },
+  {
+    "id": "beyond-good-and-evil",
+    "title": "Beyond Good and Evil",
+    "titleCN": "善恶的彼岸",
+    "author": "Friedrich Nietzsche",
+    "category": "哲学",
+    "difficulty": "托福",
+    "wordCount": 65000,
+    "gutenbergId": 4363
+  },
+  {
+    "id": "meditations",
+    "title": "Meditations",
+    "titleCN": "沉思录",
+    "author": "Marcus Aurelius",
+    "category": "哲学",
+    "difficulty": "考研",
+    "wordCount": 45000,
+    "gutenbergId": 2680
+  },
+  {
+    "id": "the-prince",
+    "title": "The Prince",
+    "titleCN": "君主论",
+    "author": "Niccolò Machiavelli",
+    "category": "哲学",
+    "difficulty": "考研",
+    "wordCount": 42000,
+    "gutenbergId": 1232
+  },
+  {
+    "id": "on-the-origin-of-species",
+    "title": "On the Origin of Species",
+    "titleCN": "物种起源",
+    "author": "Charles Darwin",
+    "category": "科普",
+    "difficulty": "考研",
+    "wordCount": 150000,
+    "gutenbergId": 1228
+  },
+  {
+    "id": "a-brief-history-of-time",
+    "title": "A Brief History of Time",
+    "titleCN": "时间简史",
+    "author": "Stephen Hawking",
+    "category": "科普",
+    "difficulty": "考研",
+    "wordCount": 80000,
+    "gutenbergId": 0
+  },
+  {
+    "id": "the-selfish-gene",
+    "title": "The Selfish Gene",
+    "titleCN": "自私的基因",
+    "author": "Richard Dawkins",
+    "category": "科普",
+    "difficulty": "考研",
+    "wordCount": 95000,
+    "gutenbergId": 0
+  },
+  {
+    "id": "silent-spring",
+    "title": "Silent Spring",
+    "titleCN": "寂静的春天",
+    "author": "Rachel Carson",
+    "category": "科普",
+    "difficulty": "考研",
+    "wordCount": 85000,
+    "gutenbergId": 0
+  },
+  {
+    "id": "the-autobiography-of-benjamin-franklin",
+    "title": "The Autobiography of Benjamin Franklin",
+    "titleCN": "本杰明·富兰克林自传",
+    "author": "Benjamin Franklin",
+    "category": "传记",
+    "difficulty": "六级",
+    "wordCount": 65000,
+    "gutenbergId": 20203
+  },
+  {
+    "id": "narrative-of-the-life-of-frederick-douglass",
+    "title": "Narrative of the Life of Frederick Douglass",
+    "titleCN": "弗雷德里克·道格拉斯自述",
+    "author": "Frederick Douglass",
+    "category": "传记",
+    "difficulty": "六级",
+    "wordCount": 42000,
+    "gutenbergId": 23
+  },
+  {
+    "id": "the-story-of-my-life",
+    "title": "The Story of My Life",
+    "titleCN": "我的生活故事",
+    "author": "Helen Keller",
+    "category": "传记",
+    "difficulty": "六级",
+    "wordCount": 55000,
+    "gutenbergId": 2397
+  },
+  {
+    "id": "wuthering-heights",
+    "title": "Wuthering Heights",
+    "titleCN": "呼啸山庄",
+    "author": "Emily Brontë",
+    "category": "小说",
+    "difficulty": "六级",
+    "wordCount": 115000,
+    "gutenbergId": 768
+  },
+  {
+    "id": "jane-eyre",
+    "title": "Jane Eyre",
+    "titleCN": "简·爱",
+    "author": "Charlotte Brontë",
+    "category": "小说",
+    "difficulty": "六级",
+    "wordCount": 183000,
+    "gutenbergId": 1260
+  },
+  {
+    "id": "great-expectations",
+    "title": "Great Expectations",
+    "titleCN": "远大前程",
+    "author": "Charles Dickens",
+    "category": "小说",
+    "difficulty": "六级",
+    "wordCount": 190000,
+    "gutenbergId": 1400
+  },
+  {
+    "id": "the-picture-of-dorian-gray",
+    "title": "The Picture of Dorian Gray",
+    "titleCN": "道林·格雷的画像",
+    "author": "Oscar Wilde",
+    "category": "小说",
+    "difficulty": "六级",
+    "wordCount": 80000,
+    "gutenbergId": 174
+  },
+  {
+    "id": "the-importance-of-being-earnest",
+    "title": "The Importance of Being Earnest",
+    "titleCN": "认真的重要性",
+    "author": "Oscar Wilde",
+    "category": "小说",
+    "difficulty": "四级",
+    "wordCount": 20000,
+    "gutenbergId": 844
+  },
+  {
+    "id": "treasure-island",
+    "title": "Treasure Island",
+    "titleCN": "金银岛",
+    "author": "Robert Louis Stevenson",
+    "category": "小说",
+    "difficulty": "四级",
+    "wordCount": 67000,
+    "gutenbergId": 120
+  },
+  {
+    "id": "the-strange-case-of-dr-jekyll",
+    "title": "The Strange Case of Dr. Jekyll and Mr. Hyde",
+    "titleCN": "化身博士",
+    "author": "Robert Louis Stevenson",
+    "category": "小说",
+    "difficulty": "六级",
+    "wordCount": 27000,
+    "gutenbergId": 43
+  },
+  {
+    "id": "moby-dick",
+    "title": "Moby Dick",
+    "titleCN": "白鲸",
+    "author": "Herman Melville",
+    "category": "小说",
+    "difficulty": "考研",
+    "wordCount": 210000,
+    "gutenbergId": 2701
+  },
+  {
+    "id": "the-adventures-of-sherlock-holmes",
+    "title": "The Adventures of Sherlock Holmes",
+    "titleCN": "福尔摩斯探案集",
+    "author": "Arthur Conan Doyle",
+    "category": "小说",
+    "difficulty": "六级",
+    "wordCount": 107000,
+    "gutenbergId": 1661
+  },
+  {
+    "id": "the-war-of-the-worlds",
+    "title": "The War of the Worlds",
+    "titleCN": "世界大战",
+    "author": "H. G. Wells",
+    "category": "科幻",
+    "difficulty": "六级",
+    "wordCount": 60000,
+    "gutenbergId": 36
+  },
+  {
+    "id": "the-invisible-man",
+    "title": "The Invisible Man",
+    "titleCN": "隐形人",
+    "author": "H. G. Wells",
+    "category": "科幻",
+    "difficulty": "六级",
+    "wordCount": 48000,
+    "gutenbergId": 5230
+  },
+  {
+    "id": "anne-of-green-gables",
+    "title": "Anne of Green Gables",
+    "titleCN": "绿山墙的安妮",
+    "author": "Lucy Maud Montgomery",
+    "category": "小说",
+    "difficulty": "四级",
+    "wordCount": 98000,
+    "gutenbergId": 45
+  },
+  {
+    "id": "the-secret-garden",
+    "title": "The Secret Garden",
+    "titleCN": "秘密花园",
+    "author": "Frances Hodgson Burnett",
+    "category": "小说",
+    "difficulty": "四级",
+    "wordCount": 80000,
+    "gutenbergId": 113
+  },
+  {
+    "id": "black-beauty",
+    "title": "Black Beauty",
+    "titleCN": "黑骏马",
+    "author": "Anna Sewell",
+    "category": "小说",
+    "difficulty": "四级",
+    "wordCount": 57000,
+    "gutenbergId": 271
+  },
+  {
+    "id": "the-wind-in-the-willows",
+    "title": "The Wind in the Willows",
+    "titleCN": "柳林风声",
+    "author": "Kenneth Grahame",
+    "category": "小说",
+    "difficulty": "四级",
+    "wordCount": 58000,
+    "gutenbergId": 289
+  },
+  {
+    "id": "heart-of-darkness",
+    "title": "Heart of Darkness",
+    "titleCN": "黑暗之心",
+    "author": "Joseph Conrad",
+    "category": "小说",
+    "difficulty": "考研",
+    "wordCount": 38000,
+    "gutenbergId": 219
+  },
+  {
+    "id": "the-call-of-the-wild",
+    "title": "The Call of the Wild",
+    "titleCN": "野性的呼唤",
+    "author": "Jack London",
+    "category": "小说",
+    "difficulty": "四级",
+    "wordCount": 32000,
+    "gutenbergId": 215
+  },
+  {
+    "id": "white-fang",
+    "title": "White Fang",
+    "titleCN": "白牙",
+    "author": "Jack London",
+    "category": "小说",
+    "difficulty": "六级",
+    "wordCount": 68000,
+    "gutenbergId": 910
+  },
+  {
+    "id": "the-great-gatsby",
+    "title": "The Great Gatsby",
+    "titleCN": "了不起的盖茨比",
+    "author": "F. Scott Fitzgerald",
+    "category": "小说",
+    "difficulty": "六级",
+    "wordCount": 47000,
+    "gutenbergId": 64317
+  },
+  {
+    "id": "the-scarlet-letter",
+    "title": "The Scarlet Letter",
+    "titleCN": "红字",
+    "author": "Nathaniel Hawthorne",
+    "category": "小说",
+    "difficulty": "考研",
+    "wordCount": 86000,
+    "gutenbergId": 33
+  },
+  {
+    "id": "the-turn-of-the-screw",
+    "title": "The Turn of the Screw",
+    "titleCN": "螺丝在拧紧",
+    "author": "Henry James",
+    "category": "小说",
+    "difficulty": "考研",
+    "wordCount": 43000,
+    "gutenbergId": 209
+  },
+  {
+    "id": "around-the-world-in-eighty-days",
+    "title": "Around the World in Eighty Days",
+    "titleCN": "八十天环游地球",
+    "author": "Jules Verne",
+    "category": "小说",
+    "difficulty": "六级",
+    "wordCount": 63000,
+    "gutenbergId": 103
+  },
+  {
+    "id": "the-count-of-monte-cristo",
+    "title": "The Count of Monte Cristo",
+    "titleCN": "基督山伯爵",
+    "author": "Alexandre Dumas",
+    "category": "小说",
+    "difficulty": "考研",
+    "wordCount": 460000,
+    "gutenbergId": 1184
+  },
+  {
+    "id": "les-miserables",
+    "title": "Les Misérables",
+    "titleCN": "悲惨世界",
+    "author": "Victor Hugo",
+    "category": "小说",
+    "difficulty": "考研",
+    "wordCount": 550000,
+    "gutenbergId": 135
+  },
+  {
+    "id": "the-three-musketeers",
+    "title": "The Three Musketeers",
+    "titleCN": "三个火枪手",
+    "author": "Alexandre Dumas",
+    "category": "小说",
+    "difficulty": "六级",
+    "wordCount": 230000,
+    "gutenbergId": 1257
+  },
+  {
+    "id": "don-quixote",
+    "title": "Don Quixote",
+    "titleCN": "堂吉诃德",
+    "author": "Miguel de Cervantes",
+    "category": "小说",
+    "difficulty": "托福",
+    "wordCount": 380000,
+    "gutenbergId": 996
+  },
+  {
+    "id": "the-divine-comedy",
+    "title": "The Divine Comedy",
+    "titleCN": "神曲",
+    "author": "Dante Alighieri",
+    "category": "哲学",
+    "difficulty": "托福",
+    "wordCount": 110000,
+    "gutenbergId": 8800
+  },
+  {
+    "id": "metamorphosis",
+    "title": "The Metamorphosis",
+    "titleCN": "变形记",
+    "author": "Franz Kafka",
+    "category": "小说",
+    "difficulty": "六级",
+    "wordCount": 22000,
+    "gutenbergId": 5200
+  },
+  {
+    "id": "the-old-man-and-the-sea",
+    "title": "The Old Man and the Sea",
+    "titleCN": "老人与海",
+    "author": "Ernest Hemingway",
+    "category": "小说",
+    "difficulty": "四级",
+    "wordCount": 27000,
+    "gutenbergId": 0
+  },
+  {
+    "id": "animal-farm",
+    "title": "Animal Farm",
+    "titleCN": "动物农场",
+    "author": "George Orwell",
+    "category": "小说",
+    "difficulty": "四级",
+    "wordCount": 30000,
+    "gutenbergId": 0
+  },
+  {
+    "id": "1984",
+    "title": "1984",
+    "titleCN": "一九八四",
+    "author": "George Orwell",
+    "category": "科幻",
+    "difficulty": "六级",
+    "wordCount": 88000,
+    "gutenbergId": 0
+  },
+  {
+    "id": "the-little-prince",
+    "title": "The Little Prince",
+    "titleCN": "小王子",
+    "author": "Antoine de Saint-Exupéry",
+    "category": "小说",
+    "difficulty": "四级",
+    "wordCount": 17000,
+    "gutenbergId": 0
+  },
+  {
+    "id": "charlottes-web",
+    "title": "Charlotte's Web",
+    "titleCN": "夏洛的网",
+    "author": "E. B. White",
+    "category": "小说",
+    "difficulty": "四级",
+    "wordCount": 32000,
+    "gutenbergId": 0
+  },
+  {
+    "id": "the-giver",
+    "title": "The Giver",
+    "titleCN": "记忆传授人",
+    "author": "Lois Lowry",
+    "category": "科幻",
+    "difficulty": "四级",
+    "wordCount": 43000,
+    "gutenbergId": 0
+  },
+  {
+    "id": "a-wrinkle-in-time",
+    "title": "A Wrinkle in Time",
+    "titleCN": "时间的皱纹",
+    "author": "Madeleine L'Engle",
+    "category": "科幻",
+    "difficulty": "四级",
+    "wordCount": 49000,
+    "gutenbergId": 0
+  },
+  {
+    "id": "the-hobbit",
+    "title": "The Hobbit",
+    "titleCN": "霍比特人",
+    "author": "J. R. R. Tolkien",
+    "category": "小说",
+    "difficulty": "六级",
+    "wordCount": 95000,
+    "gutenbergId": 0
+  },
+  {
+    "id": "fahrenheit-451",
+    "title": "Fahrenheit 451",
+    "titleCN": "华氏451",
+    "author": "Ray Bradbury",
+    "category": "科幻",
+    "difficulty": "六级",
+    "wordCount": 46000,
+    "gutenbergId": 0
+  },
+  {
+    "id": "brave-new-world",
+    "title": "Brave New World",
+    "titleCN": "美丽新世界",
+    "author": "Aldous Huxley",
+    "category": "科幻",
+    "difficulty": "考研",
+    "wordCount": 64000,
+    "gutenbergId": 0
+  },
+  {
+    "id": "the-catcher-in-the-rye",
+    "title": "The Catcher in the Rye",
+    "titleCN": "麦田里的守望者",
+    "author": "J. D. Salinger",
+    "category": "小说",
+    "difficulty": "六级",
+    "wordCount": 73000,
+    "gutenbergId": 0
+  },
+  {
+    "id": "to-kill-a-mockingbird",
+    "title": "To Kill a Mockingbird",
+    "titleCN": "杀死一只知更鸟",
+    "author": "Harper Lee",
+    "category": "小说",
+    "difficulty": "六级",
+    "wordCount": 100000,
+    "gutenbergId": 0
+  },
+  {
+    "id": "the-outsiders",
+    "title": "The Outsiders",
+    "titleCN": "局外人",
+    "author": "S. E. Hinton",
+    "category": "小说",
+    "difficulty": "四级",
+    "wordCount": 48000,
+    "gutenbergId": 0
+  },
+  {
+    "id": "hatchet",
+    "title": "Hatchet",
+    "titleCN": "手斧男孩",
+    "author": "Gary Paulsen",
+    "category": "小说",
+    "difficulty": "四级",
+    "wordCount": 42000,
+    "gutenbergId": 0
+  },
+  {
+    "id": "holes",
+    "title": "Holes",
+    "titleCN": "别有洞天",
+    "author": "Louis Sachar",
+    "category": "小说",
+    "difficulty": "四级",
+    "wordCount": 47000,
+    "gutenbergId": 0
+  },
+  {
+    "id": "tuesdays-with-morrie",
+    "title": "Tuesdays with Morrie",
+    "titleCN": "相约星期二",
+    "author": "Mitch Albom",
+    "category": "传记",
+    "difficulty": "四级",
+    "wordCount": 38000,
+    "gutenbergId": 0
+  },
+  {
+    "id": "who-moved-my-cheese",
+    "title": "Who Moved My Cheese?",
+    "titleCN": "谁动了我的奶酪？",
+    "author": "Spencer Johnson",
+    "category": "科普",
+    "difficulty": "四级",
+    "wordCount": 15000,
+    "gutenbergId": 0
+  },
+  {
+    "id": "the-alchemist",
+    "title": "The Alchemist",
+    "titleCN": "牧羊少年奇幻之旅",
+    "author": "Paulo Coelho",
+    "category": "小说",
+    "difficulty": "四级",
+    "wordCount": 42000,
+    "gutenbergId": 0
+  },
+  {
+    "id": "the-kite-runner",
+    "title": "The Kite Runner",
+    "titleCN": "追风筝的人",
+    "author": "Khaled Hosseini",
+    "category": "小说",
+    "difficulty": "六级",
+    "wordCount": 105000,
+    "gutenbergId": 0
+  },
+  {
+    "id": "life-of-pi",
+    "title": "Life of Pi",
+    "titleCN": "少年派的奇幻漂流",
+    "author": "Yann Martel",
+    "category": "小说",
+    "difficulty": "六级",
+    "wordCount": 85000,
+    "gutenbergId": 0
+  },
+  {
+    "id": "the-maze-runner",
+    "title": "The Maze Runner",
+    "titleCN": "移动迷宫",
+    "author": "James Dashner",
+    "category": "科幻",
+    "difficulty": "四级",
+    "wordCount": 75000,
+    "gutenbergId": 0
+  },
+  {
+    "id": "the-hunger-games",
+    "title": "The Hunger Games",
+    "titleCN": "饥饿游戏",
+    "author": "Suzanne Collins",
+    "category": "科幻",
+    "difficulty": "四级",
+    "wordCount": 99000,
+    "gutenbergId": 0
+  },
+  {
+    "id": "dune",
+    "title": "Dune",
+    "titleCN": "沙丘",
+    "author": "Frank Herbert",
+    "category": "科幻",
+    "difficulty": "考研",
+    "wordCount": 188000,
+    "gutenbergId": 0
+  },
+  {
+    "id": "enders-game",
+    "title": "Ender's Game",
+    "titleCN": "安德的游戏",
+    "author": "Orson Scott Card",
+    "category": "科幻",
+    "difficulty": "六级",
+    "wordCount": 100000,
+    "gutenbergId": 0
+  }
+]
