@@ -78,7 +78,7 @@ function FilterPill({
       onClick={onClick}
       className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
         active
-          ? "bg-gradient-to-r from-primary-start to-primary-end text-white shadow-sm"
+          ? "bg-gradient-to-r from-primary-start to-primary-end text-white dark:text-slate-900 shadow-sm"
           : "bg-card text-muted border border-border hover:border-primary-start/30"
       }`}
     >

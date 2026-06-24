@@ -51,7 +51,7 @@ export function ManualInput({ onComplete }: ManualInputProps) {
           placeholder="例如：8000"
           min={1000}
           max={30000}
-          className="w-full px-6 py-4 text-2xl text-center border-2 border-gray-200 rounded-2xl focus:border-primary-start focus:outline-none transition-colors"
+          className="w-full px-6 py-4 text-2xl text-center border-2 border-border rounded-2xl focus:border-primary-start focus:outline-none transition-colors bg-card text-foreground"
         />
         {error && <p className="text-red-500 text-sm mt-2">{error}</p>}
       </div>
@@ -64,7 +64,7 @@ export function ManualInput({ onComplete }: ManualInputProps) {
           step={500}
           value={value ? parseInt(value) : 5000}
           onChange={(e) => setValue(e.target.value)}
-          className="w-full accent-primary-start"
+          className="w-full accent-primary-start dark:accent-primary-end"
         />
         <div className="flex justify-between text-sm text-muted mt-1">
           <span>1,000</span>

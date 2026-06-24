@@ -81,7 +81,7 @@ export function ExamInput({ onComplete }: ExamInputProps) {
             setSelectedExam(e.target.value);
             setError("");
           }}
-          className="w-full px-6 py-4 text-lg border-2 border-gray-200 rounded-2xl focus:border-primary-start focus:outline-none transition-colors appearance-none bg-white"
+          className="w-full px-6 py-4 text-lg border-2 border-border rounded-2xl focus:border-primary-start focus:outline-none transition-colors appearance-none bg-card text-foreground"
         >
           <option value="">选择考试类型</option>
           {examData.map((exam) => (
@@ -103,7 +103,7 @@ export function ExamInput({ onComplete }: ExamInputProps) {
             }}
             placeholder={`输入${selectedExamData.label}分数`}
             step={selectedExamData.exam === "IELTS" ? 0.5 : 1}
-            className="w-full px-6 py-4 text-2xl text-center border-2 border-gray-200 rounded-2xl focus:border-primary-start focus:outline-none transition-colors"
+            className="w-full px-6 py-4 text-2xl text-center border-2 border-border rounded-2xl focus:border-primary-start focus:outline-none transition-colors bg-card text-foreground"
           />
           <p className="text-sm text-muted mt-2">
             分数范围：{selectedExamData.scoreRanges[0].min} -{" "}

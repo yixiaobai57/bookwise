@@ -107,7 +107,7 @@ export default function Home() {
             </Link>
             <Link
               href="/recommend"
-              className="inline-block px-8 py-4 rounded-full text-lg font-semibold border border-border hover:bg-accent transition-colors"
+              className="inline-block px-8 py-4 rounded-full text-lg font-semibold border border-border hover:bg-accent transition-colors text-foreground"
             >
               浏览书籍
             </Link>

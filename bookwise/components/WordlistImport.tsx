@@ -97,7 +97,7 @@ export function WordlistImport({ onComplete }: WordlistImportProps) {
           }}
           placeholder="粘贴英文单词列表，用空格、换行或逗号分隔..."
           rows={6}
-          className="w-full px-6 py-4 border-2 border-gray-200 rounded-2xl focus:border-primary-start focus:outline-none transition-colors resize-none"
+          className="w-full px-6 py-4 border-2 border-border rounded-2xl focus:border-primary-start focus:outline-none transition-colors resize-none bg-card text-foreground"
         />
       </div>
 

@@ -5,13 +5,13 @@
   --foreground: #0f172a;
   --card: #ffffff;
   --muted: #64748b;
-  --primary-start: #0ea5e9;
-  --primary-end: #06b6d4;
+  --primary-start: #1a1a2e;
+  --primary-end: #16213e;
   --coverage-high: #22c55e;
   --coverage-mid: #eab308;
   --coverage-low: #ef4444;
   --border: #e2e8f0;
-  --accent: #f0f9ff;
+  --accent: #f1f5f9;
 }
 
 [data-theme="dark"] {
@@ -19,13 +19,13 @@
   --foreground: #f1f5f9;
   --card: #1e293b;
   --muted: #94a3b8;
-  --primary-start: #38bdf8;
-  --primary-end: #22d3ee;
+  --primary-start: #f1f5f9;
+  --primary-end: #cbd5e1;
   --coverage-high: #4ade80;
   --coverage-mid: #facc15;
   --coverage-low: #f87171;
   --border: #334155;
-  --accent: #1e3a5f;
+  --accent: #1e293b;
 }
 
 @theme inline {
@@ -58,29 +58,39 @@ body {
 }
 
 .btn-gradient {
-  background: linear-gradient(135deg, var(--primary-start), var(--primary-end));
-  color: white;
+  background: linear-gradient(135deg, #1a1a2e, #16213e);
+  color: #ffffff;
   border: none;
   transition: all 0.2s ease;
+  letter-spacing: 0.02em;
 }
 
 .btn-gradient:hover {
   transform: scale(1.02);
-  box-shadow: 0 8px 25px rgba(14, 165, 233, 0.3);
+  box-shadow: 0 8px 25px rgba(26, 26, 46, 0.3);
+}
+
+[data-theme="dark"] .btn-gradient {
+  background: linear-gradient(135deg, #f1f5f9, #cbd5e1);
+  color: #0f172a;
+}
+
+[data-theme="dark"] .btn-gradient:hover {
+  box-shadow: 0 8px 25px rgba(241, 245, 249, 0.2);
 }
 
 .hero-bg {
   background:
-    radial-gradient(ellipse at 20% 50%, rgba(14, 165, 233, 0.08) 0%, transparent 50%),
-    radial-gradient(ellipse at 80% 20%, rgba(6, 182, 212, 0.06) 0%, transparent 50%),
-    radial-gradient(ellipse at 50% 80%, rgba(14, 165, 233, 0.04) 0%, transparent 50%),
+    radial-gradient(ellipse at 20% 50%, rgba(26, 26, 46, 0.04) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 20%, rgba(22, 33, 62, 0.03) 0%, transparent 50%),
+    radial-gradient(ellipse at 50% 80%, rgba(26, 26, 46, 0.02) 0%, transparent 50%),
     var(--background);
 }
 
 [data-theme="dark"] .hero-bg {
   background:
-    radial-gradient(ellipse at 20% 50%, rgba(56, 189, 248, 0.1) 0%, transparent 50%),
-    radial-gradient(ellipse at 80% 20%, rgba(34, 211, 238, 0.08) 0%, transparent 50%),
-    radial-gradient(ellipse at 50% 80%, rgba(56, 189, 248, 0.05) 0%, transparent 50%),
+    radial-gradient(ellipse at 20% 50%, rgba(226, 232, 240, 0.06) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 20%, rgba(203, 213, 225, 0.04) 0%, transparent 50%),
+    radial-gradient(ellipse at 50% 80%, rgba(226, 232, 240, 0.03) 0%, transparent 50%),
     var(--background);
 }

@@ -119,15 +119,15 @@ export default function BookDetailPage() {
                     <span
                       className={`px-3 py-1.5 rounded-full text-sm font-medium ${
                         difficultyColors[book.difficulty] ||
-                        "bg-gray-100 text-gray-700"
+                        "bg-gray-100 text-gray-700 dark:bg-gray-800 dark:text-gray-300"
                       }`}
                     >
                       {book.difficulty}
                     </span>
-                    <span className="px-3 py-1.5 rounded-full text-sm font-medium bg-gray-100 text-gray-700">
+                    <span className="px-3 py-1.5 rounded-full text-sm font-medium bg-accent text-muted">
                       {book.category}
                     </span>
-                    <span className="px-3 py-1.5 rounded-full text-sm font-medium bg-gray-100 text-gray-700">
+                    <span className="px-3 py-1.5 rounded-full text-sm font-medium bg-accent text-muted">
                       {(book.wordCount / 1000).toFixed(0)}k 词
                     </span>
                   </div>

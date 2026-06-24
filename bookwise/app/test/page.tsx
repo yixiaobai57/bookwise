@@ -49,14 +49,14 @@ export default function TestPage() {
         </motion.div>
 
         <div className="flex justify-center mb-8">
-          <div className="inline-flex bg-gray-100 rounded-2xl p-1.5">
+          <div className="inline-flex bg-accent rounded-2xl p-1.5 border border-border">
             {tabs.map((tab) => (
               <button
                 key={tab.id}
                 onClick={() => setActiveTab(tab.id)}
                 className={`relative px-4 py-2.5 rounded-xl text-sm font-medium transition-all duration-200 ${
                   activeTab === tab.id
-                    ? "text-white"
+                    ? "text-white dark:text-slate-900"
                     : "text-muted hover:text-foreground"
                 }`}
               >

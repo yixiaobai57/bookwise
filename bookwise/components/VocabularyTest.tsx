@@ -106,7 +106,7 @@ export function VocabularyTest({ onComplete }: VocabularyTestProps) {
           <span>进度</span>
           <span>{session.answers.length + 1} / 35</span>
         </div>
-        <div className="h-2 bg-gray-200 rounded-full overflow-hidden">
+        <div className="h-2 bg-border rounded-full overflow-hidden">
           <motion.div
             className="h-full bg-gradient-to-r from-primary-start to-primary-end"
             initial={{ width: 0 }}
@@ -135,14 +135,14 @@ export function VocabularyTest({ onComplete }: VocabularyTestProps) {
             <button
               onClick={() => handleAnswer(true)}
               disabled={isLoading}
-              className="px-12 py-4 rounded-2xl text-lg font-semibold bg-green-50 text-green-700 border-2 border-green-200 hover:bg-green-100 hover:border-green-300 transition-all duration-200 disabled:opacity-50"
+              className="px-12 py-4 rounded-2xl text-lg font-semibold bg-green-50 text-green-700 border-2 border-green-200 hover:bg-green-100 hover:border-green-300 transition-all duration-200 disabled:opacity-50 dark:bg-green-900/20 dark:text-green-400 dark:border-green-800 dark:hover:bg-green-900/30"
             >
               认识 ✅
             </button>
             <button
               onClick={() => handleAnswer(false)}
               disabled={isLoading}
-              className="px-12 py-4 rounded-2xl text-lg font-semibold bg-gray-50 text-gray-700 border-2 border-gray-200 hover:bg-gray-100 hover:border-gray-300 transition-all duration-200 disabled:opacity-50"
+              className="px-12 py-4 rounded-2xl text-lg font-semibold bg-gray-50 text-gray-700 border-2 border-gray-200 hover:bg-gray-100 hover:border-gray-300 transition-all duration-200 disabled:opacity-50 dark:bg-slate-800 dark:text-slate-300 dark:border-slate-700 dark:hover:bg-slate-700"
             >
               不认识 ❌
             </button>
