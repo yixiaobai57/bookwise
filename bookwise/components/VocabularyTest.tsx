@@ -10,7 +10,6 @@ import {
   estimateVocabularySize,
   isTestComplete,
 } from "@/lib/vocabulary";
-import { saveVocabulary } from "@/lib/storage";
 import cocaData from "@/data/coca-frequency.json";
 
 interface VocabularyTestProps {
@@ -54,16 +53,6 @@ export function VocabularyTest({ onComplete }: VocabularyTestProps) {
       );
       setResult(estimate);
       setIsComplete(true);
-
-      saveVocabulary({
-        vocabularySize: estimate.size,
-        testMethod: "adaptive",
-        testedAt: new Date().toISOString(),
-        knownWords: newSession.answers
-          .filter((a) => a.known)
-          .map((a) => a.word),
-      });
-
       onComplete(estimate.size);
     } else {
       loadNextWord(newSession);

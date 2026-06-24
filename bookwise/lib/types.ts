@@ -7,7 +7,7 @@ export interface Book {
   difficulty: string;
   wordCount: number;
   gutenbergId: number;
-  uniqueWords: string[];
+  uniqueWords?: string[];
   wordFrequencyDistribution: Record<string, number>;
 }
 

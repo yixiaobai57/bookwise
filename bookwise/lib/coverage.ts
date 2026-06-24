@@ -3,28 +3,44 @@ import { Book, CocabEntry } from "./types";
 export function calculateCoverage(
   book: Book,
   vocabularySize: number,
-  cocaList: CocabEntry[]
+  _cocaList: CocabEntry[]
 ): number {
-  const knownRankCutoff = vocabularySize;
+  if (!book.wordFrequencyDistribution) return 0.5;
 
-  const wordToRank = new Map<string, number>();
-  for (const entry of cocaList) {
-    wordToRank.set(entry.word.toLowerCase(), entry.rank);
-  }
+  const bands = [
+    { key: "top1000", maxRank: 1000 },
+    { key: "1001-2000", maxRank: 2000 },
+    { key: "2001-3000", maxRank: 3000 },
+    { key: "3001-4000", maxRank: 4000 },
+    { key: "4001-5000", maxRank: 5000 },
+    { key: "5001-6000", maxRank: 6000 },
+    { key: "6001-8000", maxRank: 8000 },
+    { key: "8001-10000", maxRank: 10000 },
+    { key: "10001-15000", maxRank: 15000 },
+    { key: "15000+", maxRank: 20000 },
+  ];
 
-  let matched = 0;
-  let total = book.uniqueWords.length;
+  let coverage = 0;
 
-  if (total === 0) return 0;
+  for (const band of bands) {
+    const percentage = book.wordFrequencyDistribution[band.key] || 0;
 
-  for (const word of book.uniqueWords) {
-    const rank = wordToRank.get(word.toLowerCase());
-    if (rank !== undefined && rank <= knownRankCutoff) {
-      matched++;
+    if (vocabularySize >= band.maxRank) {
+      coverage += percentage / 100;
+    } else {
+      const prevMax =
+        band === bands[0]
+          ? 0
+          : bands[bands.indexOf(band) - 1].maxRank;
+      const bandRange = band.maxRank - prevMax;
+      const knownInRange = vocabularySize - prevMax;
+      const ratio = Math.max(0, Math.min(1, knownInRange / bandRange));
+      coverage += (percentage / 100) * ratio;
+      break;
     }
   }
 
-  return matched / total;
+  return Math.min(coverage, 1.0);
 }
 
 export function calculateCoverageFromWordList(

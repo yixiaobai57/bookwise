@@ -3,7 +3,7 @@ import { calculateCoverage } from "./coverage";
 import booksData from "@/data/books.json";
 import cocaData from "@/data/coca-frequency.json";
 
-const books = booksData as Book[];
+const books = booksData as unknown as Book[];
 const cocaList = cocaData as CocabEntry[];
 
 export function getRecommendations(
