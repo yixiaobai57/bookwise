@@ -20,7 +20,8 @@
       "10001-15000": 0.58,
       "15000+": 0.01
     },
-    "coverUrl": "https://covers.openlibrary.org/w/OL58281W-L.jpg"
+    "coverUrl": "https://covers.openlibrary.org/w/OL58281W-L.jpg",
+    "description": "伊丽莎白·班纳特与达西先生的爱情故事，探讨了傲慢与偏见如何阻碍真爱。奥斯汀以机智幽默的笔触描绘了19世纪英国乡绅社会的婚姻与阶级问题。"
   },
   {
     "id": "alice-in-wonderland",
@@ -43,7 +44,8 @@
       "10001-15000": 0.01,
       "15000+": 0.42
     },
-    "coverUrl": "https://covers.openlibrary.org/w/OL45800W-L.jpg"
+    "coverUrl": "https://covers.openlibrary.org/w/OL45800W-L.jpg",
+    "description": "小女孩爱丽丝追着一只白兔掉进兔子洞，进入了一个充满荒诞逻辑的奇幻世界。她遇到了会隐身的柴郡猫、疯狂的帽匠和红心女王。"
   },
   {
     "id": "the-adventures-of-tom-sawyer",
@@ -66,7 +68,8 @@
       "10001-15000": 0.51,
       "15000+": 0.01
     },
-    "coverUrl": "https://covers.openlibrary.org/w/OL58528W-L.jpg"
+    "coverUrl": "https://covers.openlibrary.org/w/OL58528W-L.jpg",
+    "description": "调皮男孩汤姆·索亚在密西西比河畔的冒险故事。他逃学、谈恋爱、目睹谋杀案，还和好友哈克去当海盗。"
   },
   {
     "id": "a-christmas-carol",
@@ -89,7 +92,8 @@
       "10001-15000": 0.01,
       "15000+": 0.01
     },
-    "coverUrl": "https://covers.openlibrary.org/w/OL2245653W-L.jpg"
+    "coverUrl": "https://covers.openlibrary.org/w/OL2245653W-L.jpg",
+    "description": "吝啬鬼斯克鲁奇在圣诞夜被三个幽灵拜访，看到了自己的过去、现在和未来。这个故事改变了他对圣诞节和人生的态度。"
   },
   {
     "id": "the-wizard-of-oz",
@@ -112,7 +116,8 @@
       "10001-15000": 0.01,
       "15000+": 0.01
     },
-    "coverUrl": "https://covers.openlibrary.org/w/OL262367W-L.jpg"
+    "coverUrl": "https://covers.openlibrary.org/w/OL262367W-L.jpg",
+    "description": "小女孩多萝西被龙卷风卷到奥兹国，和稻草人、铁皮人、胆小狮一起踏上黄砖路，寻找能帮她回家的奥兹巫师。"
   },
   {
     "id": "peter-pan",
@@ -135,7 +140,8 @@
       "10001-15000": 0.01,
       "15000+": 0.01
     },
-    "coverUrl": "https://covers.openlibrary.org/w/OL45638W-L.jpg"
+    "coverUrl": "https://covers.openlibrary.org/w/OL45638W-L.jpg",
+    "description": "永远不会长大的男孩彼得·潘带着温蒂和她的弟弟们飞往梦幻岛，与胡克船长展开冒险。一个关于童年、成长和想象力的经典故事。"
   },
   {
     "id": "the-jungle-book",
@@ -158,7 +164,8 @@
       "10001-15000": 0.59,
       "15000+": 1.26
     },
-    "coverUrl": "https://covers.openlibrary.org/w/OL45638W-L.jpg"
+    "coverUrl": "https://covers.openlibrary.org/w/OL45638W-L.jpg",
+    "description": "印度丛林中，被狼群抚养长大的人类男孩毛格利与黑豹巴希拉、棕熊巴鲁一起生活，面对老虎谢尔汗的威胁。"
   },
   {
     "id": "frankenstein",
@@ -181,7 +188,8 @@
       "10001-15000": 0.01,
       "15000+": 1.83
     },
-    "coverUrl": "https://covers.openlibrary.org/w/OL102962W-L.jpg"
+    "coverUrl": "https://covers.openlibrary.org/w/OL102962W-L.jpg",
+    "description": "科学家弗兰肯斯坦用尸体碎片创造了一个怪物，却因恐惧而抛弃了它。怪物在被人类拒绝后开始复仇，探讨了创造者的责任和人性。"
   },
   {
     "id": "the-time-machine",
@@ -204,7 +212,8 @@
       "10001-15000": 0.01,
       "15000+": 1.94
     },
-    "coverUrl": "https://covers.openlibrary.org/w/OL47884W-L.jpg"
+    "coverUrl": "https://covers.openlibrary.org/w/OL47884W-L.jpg",
+    "description": "一位科学家发明了时间机器，来到公元802701年的未来世界。他发现人类分化成了美丽的艾洛伊人和地下的莫洛克人两个种族。"
   },
   {
     "id": "the-war-of-the-worlds",
@@ -227,7 +236,8 @@
       "10001-15000": 0.35,
       "15000+": 1.9
     },
-    "coverUrl": "https://covers.openlibrary.org/w/OL47884W-L.jpg"
+    "coverUrl": "https://covers.openlibrary.org/w/OL47884W-L.jpg",
+    "description": "火星人入侵地球的科幻经典。外星人的三脚战车用热射线摧毁一切，人类文明在强大的外星科技面前不堪一击。"
   },
   {
     "id": "twenty-thousand-leagues",
@@ -250,7 +260,8 @@
       "10001-15000": 0.26,
       "15000+": 0.01
     },
-    "coverUrl": "https://covers.openlibrary.org/w/OL467422W-L.jpg"
+    "coverUrl": "https://covers.openlibrary.org/w/OL467422W-L.jpg",
+    "description": "尼摩船长驾驶鹦鹉螺号潜艇在海底旅行两万里，经历了南极冰层、巨型章鱼和海底葬礼。一个关于海洋探险的奇幻故事。"
   },
   {
     "id": "journey-to-the-center-of-the-earth",
@@ -273,7 +284,8 @@
       "10001-15000": 0.42,
       "15000+": 1.63
     },
-    "coverUrl": "https://covers.openlibrary.org/w/OL467422W-L.jpg"
+    "coverUrl": "https://covers.openlibrary.org/w/OL467422W-L.jpg",
+    "description": "教授带着侄子和向导从冰岛的火山口进入地球内部，发现了史前生物和地下海洋，经历了一场惊心动魄的地心探险。"
   },
   {
     "id": "dracula",
@@ -296,7 +308,8 @@
       "10001-15000": 1.15,
       "15000+": 0.9
     },
-    "coverUrl": "https://covers.openlibrary.org/w/OL467422W-L.jpg"
+    "coverUrl": "https://covers.openlibrary.org/w/OL467422W-L.jpg",
+    "description": "吸血鬼德古拉伯爵从特兰西瓦尼亚来到英国，试图在伦敦建立吸血鬼军团。范海辛教授带领众人与这个不死生物展开了殊死搏斗。"
   },
   {
     "id": "the-odyssey",
@@ -319,7 +332,8 @@
       "10001-15000": 0.01,
       "15000+": 1.78
     },
-    "coverUrl": "https://covers.openlibrary.org/w/OL58281W-L.jpg"
+    "coverUrl": "https://covers.openlibrary.org/w/OL58281W-L.jpg",
+    "description": "特洛伊战争结束后，奥德修斯在海上漂泊十年才回到家乡。他遭遇了独眼巨人、海妖塞壬和女巫喀耳刻，展现了人类的智慧和毅力。"
   },
   {
     "id": "the-art-of-war",
@@ -342,7 +356,8 @@
       "10001-15000": 2.4,
       "15000+": 0.01
     },
-    "coverUrl": "https://covers.openlibrary.org/w/OL58281W-L.jpg"
+    "coverUrl": "https://covers.openlibrary.org/w/OL58281W-L.jpg",
+    "description": "中国古代军事经典，系统阐述了战争策略、战术原则和领导智慧。\"知己知彼，百战不殆\"等思想至今仍被广泛应用于商业和管理领域。"
   },
   {
     "id": "the-history-of-the-decline-and-fall",
@@ -365,7 +380,8 @@
       "10001-15000": 4.15,
       "15000+": 2.97
     },
-    "coverUrl": "https://covers.openlibrary.org/w/OL102962W-L.jpg"
+    "coverUrl": "https://covers.openlibrary.org/w/OL102962W-L.jpg",
+    "description": "罗马帝国从鼎盛到衰亡的宏大历史叙述，涵盖了从公元2世纪到15世纪拜占庭帝国灭亡的漫长历史。"
   },
   {
     "id": "a-tale-of-two-cities",
@@ -388,7 +404,8 @@
       "10001-15000": 0.36,
       "15000+": 0.47
     },
-    "coverUrl": "https://covers.openlibrary.org/w/OL52620W-L.jpg"
+    "coverUrl": "https://covers.openlibrary.org/w/OL52620W-L.jpg",
+    "description": "法国大革命背景下，伦敦和巴黎两座城市的故事。律师西德尼·卡顿为爱牺牲自己，在断头台前说出了\"这是最好的时代，也是最坏的时代\"。"
   },
   {
     "id": "the-last-of-the-mohicans",
@@ -411,7 +428,8 @@
       "10001-15000": 2.17,
       "15000+": 2.61
     },
-    "coverUrl": "https://covers.openlibrary.org/w/OL58528W-L.jpg"
+    "coverUrl": "https://covers.openlibrary.org/w/OL58528W-L.jpg",
+    "description": "法国和印第安战争期间，侦察员鹰眼和最后的莫希干族人钦加哥保护两个英国姐妹穿越战场的冒险故事。"
   },
   {
     "id": "the-republic",
@@ -434,7 +452,8 @@
       "10001-15000": 3.19,
       "15000+": 1.8
     },
-    "coverUrl": "https://covers.openlibrary.org/w/OL45800W-L.jpg"
+    "coverUrl": "https://covers.openlibrary.org/w/OL45800W-L.jpg",
+    "description": "柏拉图的哲学对话录，通过苏格拉底与他人的辩论，探讨了正义、理想国、哲学王的统治等核心哲学问题。"
   },
   {
     "id": "beyond-good-and-evil",
@@ -457,7 +476,8 @@
       "10001-15000": 1.3,
       "15000+": 4.32
     },
-    "coverUrl": "https://covers.openlibrary.org/w/OL102962W-L.jpg"
+    "coverUrl": "https://covers.openlibrary.org/w/OL102962W-L.jpg",
+    "description": "尼采对传统道德和哲学的批判性著作，提出了\"超人\"概念和\"权力意志\"理论，挑战了西方思想的基础。"
   },
   {
     "id": "meditations",
@@ -480,7 +500,8 @@
       "10001-15000": 2.48,
       "15000+": 0.01
     },
-    "coverUrl": "https://covers.openlibrary.org/w/OL58281W-L.jpg"
+    "coverUrl": "https://covers.openlibrary.org/w/OL58281W-L.jpg",
+    "description": "罗马皇帝马可·奥勒留的个人哲学笔记，记录了他对斯多葛哲学的思考，关于自律、责任和面对逆境的智慧。"
   },
   {
     "id": "the-prince",
@@ -503,7 +524,8 @@
       "10001-15000": 0.49,
       "15000+": 0.01
     },
-    "coverUrl": "https://covers.openlibrary.org/w/OL58528W-L.jpg"
+    "coverUrl": "https://covers.openlibrary.org/w/OL58528W-L.jpg",
+    "description": "马基雅维利的政治哲学经典，论述了君主如何获取和维持权力。\"为达目的不择手段\"的思想引发了持久的争议。"
   },
   {
     "id": "on-the-origin-of-species",
@@ -526,7 +548,8 @@
       "10001-15000": 0.01,
       "15000+": 0.01
     },
-    "coverUrl": "https://covers.openlibrary.org/w/OL45638W-L.jpg"
+    "coverUrl": "https://covers.openlibrary.org/w/OL45638W-L.jpg",
+    "description": "达尔文提出自然选择理论的划时代著作，解释了物种如何通过适应环境而进化，彻底改变了人类对生命起源的认识。"
   },
   {
     "id": "a-brief-history-of-time",
@@ -549,7 +572,8 @@
       "10001-15000": 1.55,
       "15000+": 2.43
     },
-    "coverUrl": "https://covers.openlibrary.org/w/OL45800W-L.jpg"
+    "coverUrl": "https://covers.openlibrary.org/w/OL45800W-L.jpg",
+    "description": "霍金用通俗易懂的语言解释了宇宙的起源、黑洞、时间箭头等深奥的物理学概念，让普通人也能理解宇宙的奥秘。"
   },
   {
     "id": "the-selfish-gene",
@@ -572,7 +596,8 @@
       "10001-15000": 2.87,
       "15000+": 0.01
     },
-    "coverUrl": "https://covers.openlibrary.org/w/OL262367W-L.jpg"
+    "coverUrl": "https://covers.openlibrary.org/w/OL262367W-L.jpg",
+    "description": "道金斯从基因的角度重新解释进化论，提出了\"自私的基因\"理论，认为生物体只是基因传播自身的载体。"
   },
   {
     "id": "silent-spring",
@@ -595,7 +620,8 @@
       "10001-15000": 2.23,
       "15000+": 0.01
     },
-    "coverUrl": "https://covers.openlibrary.org/w/OL102962W-L.jpg"
+    "coverUrl": "https://covers.openlibrary.org/w/OL102962W-L.jpg",
+    "description": "蕾切尔·卡森揭示了化学农药对环境的严重危害，引发了全球环保运动，被誉为现代环境保护运动的奠基之作。"
   },
   {
     "id": "the-autobiography-of-benjamin-franklin",
@@ -618,7 +644,8 @@
       "10001-15000": 0.01,
       "15000+": 0.78
     },
-    "coverUrl": "https://covers.openlibrary.org/w/OL58528W-L.jpg"
+    "coverUrl": "https://covers.openlibrary.org/w/OL58528W-L.jpg",
+    "description": "美国国父富兰克林的自传，记录了他从印刷学徒到科学家、外交家的传奇人生，展现了美国梦的典型故事。"
   },
   {
     "id": "narrative-of-the-life-of-frederick-douglass",
@@ -641,7 +668,8 @@
       "10001-15000": 0.01,
       "15000+": 0.01
     },
-    "coverUrl": "https://covers.openlibrary.org/w/OL58281W-L.jpg"
+    "coverUrl": "https://covers.openlibrary.org/w/OL58281W-L.jpg",
+    "description": "美国废奴运动领袖道格拉斯的自述，真实记录了奴隶制的残酷和他的逃亡经历，成为反奴隶制文学的经典。"
   },
   {
     "id": "the-story-of-my-life",
@@ -664,7 +692,8 @@
       "10001-15000": 1.54,
       "15000+": 1.67
     },
-    "coverUrl": "https://covers.openlibrary.org/w/OL45638W-L.jpg"
+    "coverUrl": "https://covers.openlibrary.org/w/OL45638W-L.jpg",
+    "description": "海伦·凯勒的自传，讲述了她在失去视力和听力后，如何在老师安妮·沙利文的帮助下学会沟通，成为激励世界的典范。"
   },
   {
     "id": "wuthering-heights",
@@ -687,7 +716,8 @@
       "10001-15000": 0.01,
       "15000+": 1.72
     },
-    "coverUrl": "https://covers.openlibrary.org/w/OL53908W-L.jpg"
+    "coverUrl": "https://covers.openlibrary.org/w/OL53908W-L.jpg",
+    "description": "呼啸山庄的弃儿希斯克利夫与凯瑟琳之间疯狂而痛苦的爱情故事。复仇、阶级和执念交织在一起，创造了一部充满激情的哥特小说。"
   },
   {
     "id": "jane-eyre",
@@ -710,7 +740,8 @@
       "10001-15000": 0.01,
       "15000+": 1.21
     },
-    "coverUrl": "https://covers.openlibrary.org/w/OL400422W-L.jpg"
+    "coverUrl": "https://covers.openlibrary.org/w/OL400422W-L.jpg",
+    "description": "孤女简·爱在寄宿学校长大，成为家庭教师后与罗切斯特先生相爱。她坚持自尊和独立，最终获得了平等的爱情。"
   },
   {
     "id": "great-expectations",
@@ -733,7 +764,8 @@
       "10001-15000": 0.01,
       "15000+": 0.01
     },
-    "coverUrl": "https://covers.openlibrary.org/w/OL52620W-L.jpg"
+    "coverUrl": "https://covers.openlibrary.org/w/OL52620W-L.jpg",
+    "description": "孤儿皮普从铁匠学徒变成绅士的历程。他爱上了冷漠的艾斯黛拉，经历了财富的得失，最终认识到真正的价值在于品格而非金钱。"
   },
   {
     "id": "the-picture-of-dorian-gray",
@@ -756,7 +788,8 @@
       "10001-15000": 0.01,
       "15000+": 1.61
     },
-    "coverUrl": "https://covers.openlibrary.org/w/OL262367W-L.jpg"
+    "coverUrl": "https://covers.openlibrary.org/w/OL262367W-L.jpg",
+    "description": "道林·格雷的画像随时间变老变丑，而他本人却保持青春。他沉溺于享乐和罪恶，画像成了他灵魂堕落的记录。"
   },
   {
     "id": "the-importance-of-being-earnest",
@@ -779,7 +812,8 @@
       "10001-15000": 0.01,
       "15000+": 1.66
     },
-    "coverUrl": "https://covers.openlibrary.org/w/OL102962W-L.jpg"
+    "coverUrl": "https://covers.openlibrary.org/w/OL102962W-L.jpg",
+    "description": "王尔德的经典喜剧，两个绅士都用\"欧内斯特\"这个假名，引发了一连串的身份误会和浪漫纠葛，讽刺了维多利亚时代的虚伪。"
   },
   {
     "id": "treasure-island",
@@ -802,7 +836,8 @@
       "10001-15000": 0.01,
       "15000+": 1.03
     },
-    "coverUrl": "https://covers.openlibrary.org/w/OL45638W-L.jpg"
+    "coverUrl": "https://covers.openlibrary.org/w/OL45638W-L.jpg",
+    "description": "少年吉姆·霍金斯发现了一张藏宝图，与利弗西医生和乡绅组织船队去金银岛寻宝。但船上的厨师约翰·西尔弗是个独腿海盗。"
   },
   {
     "id": "the-strange-case-of-dr-jekyll",
@@ -825,7 +860,8 @@
       "10001-15000": 0.44,
       "15000+": 0.96
     },
-    "coverUrl": "https://covers.openlibrary.org/w/OL58528W-L.jpg"
+    "coverUrl": "https://covers.openlibrary.org/w/OL58528W-L.jpg",
+    "description": "杰基尔博士发明了一种药水，能将自己变成邪恶的海德先生。随着变身越来越频繁，他逐渐失去了对邪恶人格的控制。"
   },
   {
     "id": "moby-dick",
@@ -848,7 +884,8 @@
       "10001-15000": 1.06,
       "15000+": 1.2
     },
-    "coverUrl": "https://covers.openlibrary.org/w/OL45800W-L.jpg"
+    "coverUrl": "https://covers.openlibrary.org/w/OL45800W-L.jpg",
+    "description": "亚哈船长执念于追杀咬断他腿的白鲸莫比·迪克，带领全船水手横渡大洋。一个关于复仇、执念和人类与自然对抗的史诗故事。"
   },
   {
     "id": "the-adventures-of-sherlock-holmes",
@@ -871,7 +908,8 @@
       "10001-15000": 1.81,
       "15000+": 1.82
     },
-    "coverUrl": "https://covers.openlibrary.org/w/OL262367W-L.jpg"
+    "coverUrl": "https://covers.openlibrary.org/w/OL262367W-L.jpg",
+    "description": "福尔摩斯与华生医生合作破案的经典故事集。包括\"波希米亚丑闻\"\"红发会\"\"身份案\"等12个精彩的推理故事。"
   },
   {
     "id": "the-invisible-man",
@@ -894,7 +932,8 @@
       "10001-15000": 0.01,
       "15000+": 0.91
     },
-    "coverUrl": "https://covers.openlibrary.org/w/OL47884W-L.jpg"
+    "coverUrl": "https://covers.openlibrary.org/w/OL47884W-L.jpg",
+    "description": "科学家格里芬发明了隐身术，但无法恢复原形。他利用隐身能力制造恐慌，最终在民众的围捕中死去。"
   },
   {
     "id": "anne-of-green-gables",
@@ -917,7 +956,8 @@
       "10001-15000": 0.01,
       "15000+": 0.5
     },
-    "coverUrl": "https://covers.openlibrary.org/w/OL58281W-L.jpg"
+    "coverUrl": "https://covers.openlibrary.org/w/OL58281W-L.jpg",
+    "description": "红发女孩安妮被误送到绿山墙农舍，用她的想象力和热情改变了收养她的兄妹的生活，也成长为一个出色的年轻女性。"
   },
   {
     "id": "the-secret-garden",
@@ -940,7 +980,8 @@
       "10001-15000": 0.27,
       "15000+": 0.01
     },
-    "coverUrl": "https://covers.openlibrary.org/w/OL58528W-L.jpg"
+    "coverUrl": "https://covers.openlibrary.org/w/OL58528W-L.jpg",
+    "description": "被宠坏的孤儿玛丽发现了被锁住的秘密花园，在照料花园的过程中，她和病弱的表弟科林都获得了新生。"
   },
   {
     "id": "black-beauty",
@@ -963,7 +1004,8 @@
       "10001-15000": 0.01,
       "15000+": 1.21
     },
-    "coverUrl": "https://covers.openlibrary.org/w/OL102962W-L.jpg"
+    "coverUrl": "https://covers.openlibrary.org/w/OL102962W-L.jpg",
+    "description": "以一匹马的视角讲述它一生的经历，从幸福的童年到残酷的马车夫，再到温暖的新家。揭示了动物福利的重要性。"
   },
   {
     "id": "the-wind-in-the-willows",
@@ -986,7 +1028,8 @@
       "10001-15000": 1.62,
       "15000+": 0.01
     },
-    "coverUrl": "https://covers.openlibrary.org/w/OL45638W-L.jpg"
+    "coverUrl": "https://covers.openlibrary.org/w/OL45638W-L.jpg",
+    "description": "河鼠、鼹鼠、蟾蜍和獾在英国乡村的冒险故事。蟾蜍迷恋汽车引发了一系列麻烦，朋友们帮助他夺回了被占的家园。"
   },
   {
     "id": "heart-of-darkness",
@@ -1009,7 +1052,8 @@
       "10001-15000": 2.74,
       "15000+": 2.53
     },
-    "coverUrl": "https://covers.openlibrary.org/w/OL45800W-L.jpg"
+    "coverUrl": "https://covers.openlibrary.org/w/OL45800W-L.jpg",
+    "description": "船长马洛沿刚果河深入非洲腹地，寻找神秘的库尔兹先生。这段旅程揭示了殖民主义的黑暗面和人性的深渊。"
   },
   {
     "id": "the-call-of-the-wild",
@@ -1032,7 +1076,8 @@
       "10001-15000": 0.01,
       "15000+": 0.01
     },
-    "coverUrl": "https://covers.openlibrary.org/w/OL262367W-L.jpg"
+    "coverUrl": "https://covers.openlibrary.org/w/OL262367W-L.jpg",
+    "description": "家犬巴克被拐卖到加拿大北方当雪橇犬，逐渐唤醒了体内的野性本能，最终响应了狼群的呼唤，回归荒野。"
   },
   {
     "id": "white-fang",
@@ -1055,7 +1100,8 @@
       "10001-15000": 0.61,
       "15000+": 0.01
     },
-    "coverUrl": "https://covers.openlibrary.org/w/OL58528W-L.jpg"
+    "coverUrl": "https://covers.openlibrary.org/w/OL58528W-L.jpg",
+    "description": "狼犬混血的白牙从荒野出生，经历了人类的残忍和善意，最终在加利福尼亚找到了温暖的家。"
   },
   {
     "id": "the-great-gatsby",
@@ -1078,7 +1124,8 @@
       "10001-15000": 0.01,
       "15000+": 0.4
     },
-    "coverUrl": "https://covers.openlibrary.org/w/OL82563W-L.jpg"
+    "coverUrl": "https://covers.openlibrary.org/w/OL82563W-L.jpg",
+    "description": "神秘富翁盖茨比举办奢华派对，只为重获昔日恋人黛西的爱情。一个关于美国梦的幻灭和上流社会虚伪的悲剧故事。"
   },
   {
     "id": "the-scarlet-letter",
@@ -1101,7 +1148,8 @@
       "10001-15000": 1.96,
       "15000+": 0.8
     },
-    "coverUrl": "https://covers.openlibrary.org/w/OL58281W-L.jpg"
+    "coverUrl": "https://covers.openlibrary.org/w/OL58281W-L.jpg",
+    "description": "清教徒社会中，海丝特因通奸罪被迫佩戴红色的\"A\"字。她在耻辱中保持尊严，而隐藏的罪人丁梅斯代尔牧师却在内心煎熬中走向死亡。"
   },
   {
     "id": "the-turn-of-the-screw",
@@ -1124,7 +1172,8 @@
       "10001-15000": 1.18,
       "15000+": 2.27
     },
-    "coverUrl": "https://covers.openlibrary.org/w/OL102962W-L.jpg"
+    "coverUrl": "https://covers.openlibrary.org/w/OL102962W-L.jpg",
+    "description": "一位年轻家庭女教师在乡间庄园照顾两个孩子，逐渐怀疑他们被死去的前任仆人的鬼魂附身。一个充满悬疑的心理恐怖故事。"
   },
   {
     "id": "around-the-world-in-eighty-days",
@@ -1147,7 +1196,8 @@
       "10001-15000": 0.01,
       "15000+": 0.62
     },
-    "coverUrl": "https://covers.openlibrary.org/w/OL45638W-L.jpg"
+    "coverUrl": "https://covers.openlibrary.org/w/OL45638W-L.jpg",
+    "description": "英国绅士福格与仆人路路通打赌能在80天内环游地球。他们穿越欧洲、印度、日本和美国，与时间赛跑。"
   },
   {
     "id": "the-count-of-monte-cristo",
@@ -1170,7 +1220,8 @@
       "10001-15000": 2.88,
       "15000+": 0.42
     },
-    "coverUrl": "https://covers.openlibrary.org/w/OL58528W-L.jpg"
+    "coverUrl": "https://covers.openlibrary.org/w/OL58528W-L.jpg",
+    "description": "水手唐泰斯被陷害入狱，在狱中获得宝藏的秘密。越狱后他化身为基督山伯爵，对三个仇人展开了精心策划的复仇。"
   },
   {
     "id": "les-miserables",
@@ -1193,7 +1244,8 @@
       "10001-15000": 2.66,
       "15000+": 1.74
     },
-    "coverUrl": "https://covers.openlibrary.org/w/OL262367W-L.jpg"
+    "coverUrl": "https://covers.openlibrary.org/w/OL262367W-L.jpg",
+    "description": "冉·阿让因偷面包被判刑19年，出狱后在主教的感化下重新做人。他帮助孤女珂赛特，却始终被警探沙威追捕。法国大革命的宏大背景。"
   },
   {
     "id": "the-three-musketeers",
@@ -1216,7 +1268,8 @@
       "10001-15000": 0.01,
       "15000+": 0.04
     },
-    "coverUrl": "https://covers.openlibrary.org/w/OL45800W-L.jpg"
+    "coverUrl": "https://covers.openlibrary.org/w/OL45800W-L.jpg",
+    "description": "年轻骑士达达尼昂加入火枪队，与三个好友阿托斯、波尔托斯和阿拉密斯一起，对抗红衣主教黎塞留的阴谋，保护王后的荣誉。"
   },
   {
     "id": "don-quixote",
@@ -1239,7 +1292,8 @@
       "10001-15000": 1.36,
       "15000+": 1.41
     },
-    "coverUrl": "https://covers.openlibrary.org/w/OL45638W-L.jpg"
+    "coverUrl": "https://covers.openlibrary.org/w/OL45638W-L.jpg",
+    "description": "西班牙老骑士读骑士小说走火入魔，带着侍从桑丘·潘沙外出冒险，把风车当巨人、把羊群当军队，成为文学史上最著名的喜剧形象。"
   },
   {
     "id": "the-divine-comedy",
@@ -1262,7 +1316,8 @@
       "10001-15000": 2.26,
       "15000+": 2.12
     },
-    "coverUrl": "https://covers.openlibrary.org/w/OL102962W-L.jpg"
+    "coverUrl": "https://covers.openlibrary.org/w/OL102962W-L.jpg",
+    "description": "但丁在古罗马诗人维吉尔的带领下，游历地狱、炼狱和天堂，最终见到上帝。中世纪最伟大的文学作品，描绘了灵魂的救赎之旅。"
   },
   {
     "id": "metamorphosis",
@@ -1285,7 +1340,8 @@
       "10001-15000": 0.6,
       "15000+": 1.42
     },
-    "coverUrl": "https://covers.openlibrary.org/w/OL262367W-L.jpg"
+    "coverUrl": "https://covers.openlibrary.org/w/OL262367W-L.jpg",
+    "description": "推销员格里高尔一觉醒来发现自己变成了巨大的甲虫。家人从震惊到厌弃，他逐渐被孤立，在孤独中死去。卡夫卡对现代人异化的深刻隐喻。"
   },
   {
     "id": "the-old-man-and-the-sea",
@@ -1308,7 +1364,8 @@
       "10001-15000": 0.01,
       "15000+": 0.01
     },
-    "coverUrl": "https://covers.openlibrary.org/w/OL45919W-L.jpg"
+    "coverUrl": "https://covers.openlibrary.org/w/OL45919W-L.jpg",
+    "description": "古巴老渔夫圣地亚哥连续84天没捕到鱼，终于钓到一条巨大的马林鱼。在与大鱼和鲨鱼搏斗三天后，他只带回了一副鱼骨架。"
   },
   {
     "id": "animal-farm",
@@ -1331,7 +1388,8 @@
       "10001-15000": 1.62,
       "15000+": 0.68
     },
-    "coverUrl": "https://covers.openlibrary.org/w/OL73897W-L.jpg"
+    "coverUrl": "https://covers.openlibrary.org/w/OL73897W-L.jpg",
+    "description": "农场的动物推翻了人类统治，建立了自己的政权。但猪逐渐篡夺权力，变得和人类一样专制。一个关于革命如何背叛理想的寓言。"
   },
   {
     "id": "1984",
@@ -1354,7 +1412,8 @@
       "10001-15000": 0.28,
       "15000+": 0.01
     },
-    "coverUrl": "https://covers.openlibrary.org/w/OL450048W-L.jpg"
+    "coverUrl": "https://covers.openlibrary.org/w/OL450048W-L.jpg",
+    "description": "极权社会中，温斯顿在\"老大哥\"的监控下偷偷写日记、恋爱，最终被思想警察逮捕洗脑。一个关于极权主义和思想控制的警示录。"
   },
   {
     "id": "the-little-prince",
@@ -1377,7 +1436,8 @@
       "10001-15000": 0.01,
       "15000+": 0.01
     },
-    "coverUrl": "https://covers.openlibrary.org/w/OL459088W-L.jpg"
+    "coverUrl": "https://covers.openlibrary.org/w/OL459088W-L.jpg",
+    "description": "小王子从B612星球出发，游历各个星球，遇到了国王、虚荣者、酒鬼等奇怪的大人。在地球上他与飞行员相遇，学会了\"用心才能看清\"。"
   },
   {
     "id": "charlottes-web",
@@ -1400,7 +1460,8 @@
       "10001-15000": 0.01,
       "15000+": 0.01
     },
-    "coverUrl": "https://covers.openlibrary.org/w/OL262367W-L.jpg"
+    "coverUrl": "https://covers.openlibrary.org/w/OL262367W-L.jpg",
+    "description": "小猪威尔伯面临被宰杀的命运，蜘蛛夏洛在蛛网上织出文字\"好猪\"来拯救它。一个关于友谊、牺牲和生命轮回的温暖故事。"
   },
   {
     "id": "the-giver",
@@ -1423,7 +1484,8 @@
       "10001-15000": 0.32,
       "15000+": 0.01
     },
-    "coverUrl": "https://covers.openlibrary.org/w/OL102962W-L.jpg"
+    "coverUrl": "https://covers.openlibrary.org/w/OL102962W-L.jpg",
+    "description": "在一个没有痛苦、没有选择的未来社会，12岁的乔纳斯被选为\"记忆传承人\"，开始了解被社会隐藏的真相，面临改变命运的抉择。"
   },
   {
     "id": "a-wrinkle-in-time",
@@ -1446,7 +1508,8 @@
       "10001-15000": 0.01,
       "15000+": 0.01
     },
-    "coverUrl": "https://covers.openlibrary.org/w/OL45638W-L.jpg"
+    "coverUrl": "https://covers.openlibrary.org/w/OL45638W-L.jpg",
+    "description": "女孩梅格为寻找失踪的科学家父亲，与弟弟和同学一起穿越时空褶皱，对抗控制宇宙的黑暗力量。一个关于爱和勇气的科幻冒险。"
   },
   {
     "id": "the-hobbit",
@@ -1469,7 +1532,8 @@
       "10001-15000": 1.64,
       "15000+": 0.46
     },
-    "coverUrl": "https://covers.openlibrary.org/w/OL262758W-L.jpg"
+    "coverUrl": "https://covers.openlibrary.org/w/OL262758W-L.jpg",
+    "description": "霍比特人比尔博·巴金斯被巫师甘道夫拉入一场冒险，与十三个矮人一起前往孤山夺回被恶龙斯矛戈占据的宝藏。"
   },
   {
     "id": "fahrenheit-451",
@@ -1492,7 +1556,8 @@
       "10001-15000": 0.7,
       "15000+": 0.01
     },
-    "coverUrl": "https://covers.openlibrary.org/w/OL58528W-L.jpg"
+    "coverUrl": "https://covers.openlibrary.org/w/OL58528W-L.jpg",
+    "description": "在未来社会，消防员的工作不是灭火而是焚书。消防员蒙塔格开始质疑这个制度，秘密收藏书籍，最终加入了地下知识分子的行列。"
   },
   {
     "id": "brave-new-world",
@@ -1515,7 +1580,8 @@
       "10001-15000": 1.39,
       "15000+": 2.41
     },
-    "coverUrl": "https://covers.openlibrary.org/w/OL45800W-L.jpg"
+    "coverUrl": "https://covers.openlibrary.org/w/OL45800W-L.jpg",
+    "description": "未来世界通过基因工程和药物控制人类，人们从出生就被分配等级。野蛮人约翰从保留地来到\"文明\"社会，却无法接受这种没有自由的幸福。"
   },
   {
     "id": "the-catcher-in-the-rye",
@@ -1538,7 +1604,8 @@
       "10001-15000": 1.82,
       "15000+": 0.01
     },
-    "coverUrl": "https://covers.openlibrary.org/w/OL467523W-L.jpg"
+    "coverUrl": "https://covers.openlibrary.org/w/OL467523W-L.jpg",
+    "description": "16岁的霍尔顿被学校开除后在纽约游荡三天，对成人世界的虚伪感到厌恶。他幻想成为\"麦田里的守望者\"，保护孩子们不要跌入悬崖。"
   },
   {
     "id": "to-kill-a-mockingbird",
@@ -1561,7 +1628,8 @@
       "10001-15000": 1.31,
       "15000+": 2.19
     },
-    "coverUrl": "https://covers.openlibrary.org/w/OL45540W-L.jpg"
+    "coverUrl": "https://covers.openlibrary.org/w/OL45540W-L.jpg",
+    "description": "美国南方小镇上，律师阿提克斯为被诬告强奸白人女子的黑人辩护。通过孩子斯库特的眼睛，揭示了种族歧视和社会不公。"
   },
   {
     "id": "the-outsiders",
@@ -1584,7 +1652,8 @@
       "10001-15000": 1.53,
       "15000+": 1.01
     },
-    "coverUrl": "https://covers.openlibrary.org/w/OL102962W-L.jpg"
+    "coverUrl": "https://covers.openlibrary.org/w/OL102962W-L.jpg",
+    "description": "贫困少年波尼与\"油渍帮\"的兄弟们面对\"富家子弟\"的欺凌，在一场意外后被迫逃亡。一个关于阶级冲突和兄弟情谊的成长故事。"
   },
   {
     "id": "hatchet",
@@ -1607,7 +1676,8 @@
       "10001-15000": 0.22,
       "15000+": 1.67
     },
-    "coverUrl": "https://covers.openlibrary.org/w/OL45638W-L.jpg"
+    "coverUrl": "https://covers.openlibrary.org/w/OL45638W-L.jpg",
+    "description": "13岁的布莱恩在飞机失事后独自困在加拿大荒野，仅靠一把手斧求生。他学会了生火、捕鱼、搭建庇护所，在绝境中成长为真正的男子汉。"
   },
   {
     "id": "holes",
@@ -1630,7 +1700,8 @@
       "10001-15000": 0.15,
       "15000+": 1.71
     },
-    "coverUrl": "https://covers.openlibrary.org/w/OL262367W-L.jpg"
+    "coverUrl": "https://covers.openlibrary.org/w/OL262367W-L.jpg",
+    "description": "斯坦利被冤枉送到绿湖营挖洞，每个洞必须五英尺宽五英尺深。他发现挖洞背后隐藏着家族的诅咒和营地的秘密宝藏。"
   },
   {
     "id": "tuesdays-with-morrie",
@@ -1653,7 +1724,8 @@
       "10001-15000": 1.78,
       "15000+": 1.51
     },
-    "coverUrl": "https://covers.openlibrary.org/w/OL58528W-L.jpg"
+    "coverUrl": "https://covers.openlibrary.org/w/OL58528W-L.jpg",
+    "description": "作者米奇与身患绝症的老教授莫里每周二相会，讨论人生的意义。莫里在生命最后的日子里，教会了学生关于爱、工作和死亡的智慧。"
   },
   {
     "id": "who-moved-my-cheese",
@@ -1676,7 +1748,8 @@
       "10001-15000": 0.01,
       "15000+": 0.01
     },
-    "coverUrl": "https://covers.openlibrary.org/w/OL58281W-L.jpg"
+    "coverUrl": "https://covers.openlibrary.org/w/OL58281W-L.jpg",
+    "description": "两只小老鼠和两个小人儿在迷宫中寻找奶酪。当奶酪消失后，不同角色面对变化的态度截然不同。一个关于适应变化的寓言故事。"
   },
   {
     "id": "the-alchemist",
@@ -1699,7 +1772,8 @@
       "10001-15000": 0.88,
       "15000+": 0.67
     },
-    "coverUrl": "https://covers.openlibrary.org/w/OL102962W-L.jpg"
+    "coverUrl": "https://covers.openlibrary.org/w/OL102962W-L.jpg",
+    "description": "牧羊少年圣地亚哥梦见埃及金字塔下有宝藏，踏上了横跨非洲的寻宝之旅。他学会了倾听内心的声音，发现了\"世界之魂\"的奥秘。"
   },
   {
     "id": "the-kite-runner",
@@ -1722,7 +1796,8 @@
       "10001-15000": 0.03,
       "15000+": 0.62
     },
-    "coverUrl": "https://covers.openlibrary.org/w/OL45638W-L.jpg"
+    "coverUrl": "https://covers.openlibrary.org/w/OL45638W-L.jpg",
+    "description": "阿富汗富家少爷阿米尔与仆人之子哈桑的友谊因一场风筝比赛而破裂。多年后已移居美国的阿米尔重返故土，面对过去的罪恶和救赎。"
   },
   {
     "id": "life-of-pi",
@@ -1745,7 +1820,8 @@
       "10001-15000": 0.51,
       "15000+": 1.04
     },
-    "coverUrl": "https://covers.openlibrary.org/w/OL262367W-L.jpg"
+    "coverUrl": "https://covers.openlibrary.org/w/OL262367W-L.jpg",
+    "description": "印度少年派与一只孟加拉虎在太平洋上漂流227天的生存故事。在极端困境中，派与老虎建立了奇特的共生关系，探讨了信仰和生存的意义。"
   },
   {
     "id": "the-maze-runner",
@@ -1768,7 +1844,8 @@
       "10001-15000": 0.01,
       "15000+": 1.16
     },
-    "coverUrl": "https://covers.openlibrary.org/w/OL45800W-L.jpg"
+    "coverUrl": "https://covers.openlibrary.org/w/OL45800W-L.jpg",
+    "description": "托马斯醒来时发现自己在一个巨大的迷宫中，失去了所有记忆。迷宫每天变化，里面有致命的怪物。他必须和其他少年一起找到出路。"
   },
   {
     "id": "the-hunger-games",
@@ -1791,7 +1868,8 @@
       "10001-15000": 1.47,
       "15000+": 0.54
     },
-    "coverUrl": "https://covers.openlibrary.org/w/OL58528W-L.jpg"
+    "coverUrl": "https://covers.openlibrary.org/w/OL58528W-L.jpg",
+    "description": "未来北美废墟上建立的施惠国，每年强制各辖区选出少男少女参加电视直播的生死搏杀。16岁的凯特尼斯自愿替妹妹参赛，成为反抗的象征。"
   },
   {
     "id": "dune",
@@ -1814,7 +1892,8 @@
       "10001-15000": 2.31,
       "15000+": 0.01
     },
-    "coverUrl": "https://covers.openlibrary.org/w/OL58281W-L.jpg"
+    "coverUrl": "https://covers.openlibrary.org/w/OL58281W-L.jpg",
+    "description": "沙漠星球阿拉基斯出产宇宙中最珍贵的香料。年轻公爵保罗在家族被背叛后流落沙漠，与弗雷曼人一起，开始了改变宇宙命运的征程。"
   },
   {
     "id": "enders-game",
@@ -1837,6 +1916,7 @@
       "10001-15000": 2.1,
       "15000+": 1.98
     },
-    "coverUrl": "https://covers.openlibrary.org/w/OL102962W-L.jpg"
+    "coverUrl": "https://covers.openlibrary.org/w/OL102962W-L.jpg",
+    "description": "6岁的天才少年安德被送入太空军校，接受对抗外星虫族的残酷训练。他在模拟战斗中展现出惊人的军事才能，却不知自己正在毁灭一个种族。"
   }
 ]

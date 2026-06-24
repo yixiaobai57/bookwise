@@ -101,9 +101,20 @@ export default function BookDetailPage() {
             ← 返回推荐列表
           </a>
 
-          <div className="bg-card rounded-3xl shadow-sm border border-gray-100 overflow-hidden">
-            <div className="h-64 bg-gradient-to-br from-primary-start/20 to-primary-end/20 flex items-center justify-center">
-              <div className="text-8xl">📖</div>
+          <div className="bg-card rounded-3xl shadow-sm border border-border overflow-hidden">
+            <div className="h-64 bg-gradient-to-br from-primary-start/20 to-primary-end/20 flex items-center justify-center relative overflow-hidden">
+              {book.coverUrl ? (
+                <img
+                  src={book.coverUrl}
+                  alt={book.title}
+                  className="w-full h-full object-cover"
+                  onError={(e) => {
+                    e.currentTarget.style.display = "none";
+                  }}
+                />
+              ) : (
+                <div className="text-8xl">📖</div>
+              )}
             </div>
 
             <div className="p-8 md:p-12">
@@ -148,9 +159,18 @@ export default function BookDetailPage() {
                 </div>
               </div>
 
-              <div className="mt-8 pt-8 border-t border-gray-100">
+              {book.description && (
+                <div className="mt-8 pt-8 border-t border-border">
+                  <h2 className="text-xl font-bold mb-4">📖 书籍简介</h2>
+                  <p className="text-muted leading-relaxed text-base">
+                    {book.description}
+                  </p>
+                </div>
+              )}
+
+              <div className="mt-8 pt-8 border-t border-border">
                 <h2 className="text-xl font-bold mb-4">阅读建议</h2>
-                <div className="bg-gray-50 rounded-2xl p-6">
+                <div className="bg-accent rounded-2xl p-6">
                   {coveragePercent >= 80 ? (
                     <div>
                       <p className="text-green-700 font-semibold mb-2">
