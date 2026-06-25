@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 
 export const dynamic = "force-dynamic";
-export const runtime = "nodejs";
+export const runtime = "edge";
 
 export async function GET(request: Request) {
   try {
@@ -40,6 +40,7 @@ export async function GET(request: Request) {
       headers: {
         "Content-Type": contentType,
         "Cache-Control": "public, max-age=2592000, s-maxage=2592000",
+        "Access-Control-Allow-Origin": "*",
       },
     });
   } catch (error) {
