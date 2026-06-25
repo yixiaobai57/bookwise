@@ -51,11 +51,6 @@ interface BookCoverProps {
   className?: string;
 }
 
-function extractWorkId(coverUrl: string): string | null {
-  const match = coverUrl.match(/\/w\/(OL\d+W)-/);
-  return match ? match[1] : null;
-}
-
 export function BookCover({
   title,
   author,
@@ -65,10 +60,7 @@ export function BookCover({
 }: BookCoverProps) {
   const [imageError, setImageError] = useState(false);
   const style = categoryStyles[category] || categoryStyles["小说"];
-
-  const workId = coverUrl ? extractWorkId(coverUrl) : null;
-  const proxyCoverUrl = workId ? `/api/cover?work=${workId}&size=L` : null;
-  const showImage = proxyCoverUrl && !imageError;
+  const showImage = coverUrl && !imageError;
 
   return (
     <div
@@ -76,7 +68,7 @@ export function BookCover({
     >
       {showImage && (
         <img
-          src={proxyCoverUrl}
+          src={coverUrl}
           alt={title}
           className="absolute inset-0 w-full h-full object-cover"
           onError={() => setImageError(true)}
