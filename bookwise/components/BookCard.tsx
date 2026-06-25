@@ -33,6 +33,7 @@ export function BookCard({ book, index = 0 }: BookCardProps) {
           title={book.title}
           author={book.author}
           category={book.category}
+          coverUrl={book.coverUrl}
           className="h-48 group-hover:scale-105 transition-transform duration-300"
         />
       </div>

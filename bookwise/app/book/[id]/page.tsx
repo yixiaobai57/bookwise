@@ -108,6 +108,7 @@ export default function BookDetailPage() {
                 title={book.title}
                 author={book.author}
                 category={book.category}
+                coverUrl={book.coverUrl}
                 className="h-64"
               />
             </div>
