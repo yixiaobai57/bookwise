@@ -1,0 +1,96 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f8fafc;
+  --foreground: #0f172a;
+  --card: #ffffff;
+  --muted: #64748b;
+  --primary-start: #1a1a2e;
+  --primary-end: #16213e;
+  --coverage-high: #22c55e;
+  --coverage-mid: #eab308;
+  --coverage-low: #ef4444;
+  --border: #e2e8f0;
+  --accent: #f1f5f9;
+}
+
+[data-theme="dark"] {
+  --background: #0f172a;
+  --foreground: #f1f5f9;
+  --card: #1e293b;
+  --muted: #94a3b8;
+  --primary-start: #f1f5f9;
+  --primary-end: #cbd5e1;
+  --coverage-high: #4ade80;
+  --coverage-mid: #facc15;
+  --coverage-low: #f87171;
+  --border: #334155;
+  --accent: #1e293b;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-muted: var(--muted);
+  --color-primary-start: var(--primary-start);
+  --color-primary-end: var(--primary-end);
+  --color-coverage-high: var(--coverage-high);
+  --color-coverage-mid: var(--coverage-mid);
+  --color-coverage-low: var(--coverage-low);
+  --color-border: var(--border);
+  --color-accent: var(--accent);
+  --font-sans: var(--font-inter);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-inter), "Noto Sans SC", Arial, Helvetica, sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, var(--primary-start), var(--primary-end));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.btn-gradient {
+  background: linear-gradient(135deg, #1a1a2e, #16213e);
+  color: #ffffff;
+  border: none;
+  transition: all 0.2s ease;
+  letter-spacing: 0.02em;
+}
+
+.btn-gradient:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 25px rgba(26, 26, 46, 0.3);
+}
+
+[data-theme="dark"] .btn-gradient {
+  background: linear-gradient(135deg, #f1f5f9, #cbd5e1);
+  color: #0f172a;
+}
+
+[data-theme="dark"] .btn-gradient:hover {
+  box-shadow: 0 8px 25px rgba(241, 245, 249, 0.2);
+}
+
+.hero-bg {
+  background:
+    radial-gradient(ellipse at 20% 50%, rgba(26, 26, 46, 0.04) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 20%, rgba(22, 33, 62, 0.03) 0%, transparent 50%),
+    radial-gradient(ellipse at 50% 80%, rgba(26, 26, 46, 0.02) 0%, transparent 50%),
+    var(--background);
+}
+
+[data-theme="dark"] .hero-bg {
+  background:
+    radial-gradient(ellipse at 20% 50%, rgba(226, 232, 240, 0.06) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 20%, rgba(203, 213, 225, 0.04) 0%, transparent 50%),
+    radial-gradient(ellipse at 50% 80%, rgba(226, 232, 240, 0.03) 0%, transparent 50%),
+    var(--background);
+}
