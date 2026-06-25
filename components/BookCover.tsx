@@ -1,45 +1,63 @@
 "use client";
 
-import { useState } from "react";
-
 const categoryStyles: Record<
   string,
-  { bg: string; accent: string; pattern: string }
+  {
+    bg: string;
+    textGradient: string;
+    pattern: string;
+    spine: string;
+    shine: string;
+  }
 > = {
   小说: {
-    bg: "from-blue-600 via-blue-700 to-indigo-800",
-    accent: "rgba(255,255,255,0.15)",
-    pattern: "✦",
+    bg: "from-slate-900 via-blue-950 to-slate-900",
+    textGradient: "from-blue-200 to-blue-400",
+    pattern: "📚",
+    spine: "bg-blue-900",
+    shine: "from-blue-400/10 to-transparent",
   },
   科幻: {
-    bg: "from-violet-600 via-purple-700 to-fuchsia-800",
-    accent: "rgba(255,255,255,0.12)",
-    pattern: "◆",
+    bg: "from-slate-900 via-purple-950 to-slate-900",
+    textGradient: "from-purple-200 to-purple-400",
+    pattern: "✨",
+    spine: "bg-purple-900",
+    shine: "from-purple-400/10 to-transparent",
   },
   历史: {
-    bg: "from-amber-600 via-orange-700 to-red-800",
-    accent: "rgba(255,255,255,0.1)",
-    pattern: "❖",
+    bg: "from-amber-950 via-stone-900 to-amber-950",
+    textGradient: "from-amber-200 to-amber-400",
+    pattern: "🏛️",
+    spine: "bg-amber-900",
+    shine: "from-amber-400/10 to-transparent",
   },
   哲学: {
-    bg: "from-emerald-600 via-teal-700 to-cyan-800",
-    accent: "rgba(255,255,255,0.12)",
-    pattern: "◈",
+    bg: "from-emerald-950 via-teal-950 to-emerald-950",
+    textGradient: "from-emerald-200 to-emerald-400",
+    pattern: "🧠",
+    spine: "bg-emerald-900",
+    shine: "from-emerald-400/10 to-transparent",
   },
   传记: {
-    bg: "from-rose-600 via-pink-700 to-red-800",
-    accent: "rgba(255,255,255,0.1)",
-    pattern: "✧",
+    bg: "from-rose-950 via-slate-900 to-rose-950",
+    textGradient: "from-rose-200 to-rose-400",
+    pattern: "👤",
+    spine: "bg-rose-900",
+    shine: "from-rose-400/10 to-transparent",
   },
   科普: {
-    bg: "from-cyan-600 via-sky-700 to-blue-800",
-    accent: "rgba(255,255,255,0.12)",
-    pattern: "⬡",
+    bg: "from-cyan-950 via-slate-900 to-cyan-950",
+    textGradient: "from-cyan-200 to-cyan-400",
+    pattern: "🔬",
+    spine: "bg-cyan-900",
+    shine: "from-cyan-400/10 to-transparent",
   },
   教材: {
-    bg: "from-slate-600 via-gray-700 to-zinc-800",
-    accent: "rgba(255,255,255,0.1)",
-    pattern: "▣",
+    bg: "from-slate-800 via-zinc-900 to-slate-800",
+    textGradient: "from-slate-200 to-slate-400",
+    pattern: "📖",
+    spine: "bg-slate-700",
+    shine: "from-slate-400/10 to-transparent",
   },
 };
 
@@ -55,59 +73,59 @@ export function BookCover({
   title,
   author,
   category,
-  coverUrl,
   className = "",
 }: BookCoverProps) {
-  const [imageError, setImageError] = useState(false);
   const style = categoryStyles[category] || categoryStyles["小说"];
-  const showImage = coverUrl && !imageError;
 
   return (
     <div
-      className={`relative bg-gradient-to-br ${style.bg} flex flex-col items-center justify-center overflow-hidden ${className}`}
+      className={`relative bg-gradient-to-br ${style.bg} flex flex-col overflow-hidden ${className} shadow-lg`}
     >
-      {showImage && (
-        <img
-          src={coverUrl}
-          alt={title}
-          className="absolute inset-0 w-full h-full object-cover"
-          onError={() => setImageError(true)}
-          loading="lazy"
-        />
-      )}
+      <div className="absolute inset-0 bg-gradient-to-br from-white/5 via-transparent to-black/30" />
 
-      {!showImage && (
-        <>
-          <div className="absolute inset-0 opacity-10">
-            <div className="absolute top-4 left-4 text-6xl">{style.pattern}</div>
-            <div className="absolute bottom-4 right-4 text-4xl rotate-45">
-              {style.pattern}
-            </div>
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-8xl opacity-30">
-              {style.pattern}
-            </div>
+      <div className={`absolute left-0 top-0 bottom-0 w-2 ${style.spine} shadow-inner`} />
+      <div className="absolute left-2 top-0 bottom-0 w-px bg-black/30" />
+
+      <div className="absolute top-3 right-3 text-lg opacity-40">{style.pattern}</div>
+      <div className="absolute bottom-3 left-5 text-sm opacity-20 rotate-12">{style.pattern}</div>
+
+      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 text-7xl opacity-10">
+        {style.pattern}
+      </div>
+
+      <div className={`absolute top-0 left-0 right-0 h-1/3 bg-gradient-to-b ${style.shine}`} />
+
+      <div className="relative z-10 flex flex-col items-center justify-center h-full px-5 py-6 text-center">
+        <div className={`text-xs font-semibold tracking-[0.25em] uppercase mb-4 bg-gradient-to-r ${style.textGradient} bg-clip-text text-transparent`}>
+          {category}
+        </div>
+
+        <div className="w-10 h-px bg-white/20 mb-4" />
+
+        <h3
+          className={`font-serif font-bold text-white leading-tight mb-4 drop-shadow-lg`}
+          style={{
+            fontSize: title.length > 30 ? "0.95rem" : title.length > 20 ? "1.1rem" : "1.25rem",
+            lineHeight: 1.3,
+          }}
+        >
+          {title}
+        </h3>
+
+        <div className="w-8 h-px bg-white/15 mb-3" />
+
+        <p className="text-white/60 text-sm font-light tracking-wide">{author}</p>
+
+        <div className="mt-auto pt-4">
+          <div className={`w-6 h-6 rounded-full border border-white/20 flex items-center justify-center text-xs opacity-50`}>
+            {style.pattern}
           </div>
+        </div>
+      </div>
 
-          <div className="absolute left-0 top-0 bottom-0 w-3 bg-black/20" />
+      <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-white/10 to-transparent" />
 
-          <div className="relative z-10 text-center px-4">
-            <div className="text-white/60 text-xs font-medium tracking-widest uppercase mb-3">
-              {category}
-            </div>
-            <h3 className="text-white font-bold text-lg leading-tight mb-2 line-clamp-3">
-              {title}
-            </h3>
-            <div className="w-12 h-0.5 bg-white/30 mx-auto mb-2" />
-            <p className="text-white/70 text-sm">{author}</p>
-          </div>
-
-          <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-white/20 to-transparent" />
-        </>
-      )}
-
-      {showImage && (
-        <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none" />
-      )}
+      <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-black/10 to-transparent pointer-events-none" />
     </div>
   );
 }
