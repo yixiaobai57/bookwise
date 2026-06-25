@@ -75,13 +75,12 @@ export function BookCover({
   title,
   author,
   category,
+  coverUrl,
   className = "",
 }: BookCoverProps) {
   const [imageError, setImageError] = useState(false);
   const style = categoryStyles[category] || categoryStyles["小说"];
-
-  const apiCoverUrl = `/api/book-cover?title=${encodeURIComponent(title)}&author=${encodeURIComponent(author)}`;
-  const showImage = !imageError;
+  const showImage = coverUrl && !imageError;
 
   return (
     <div
@@ -89,7 +88,7 @@ export function BookCover({
     >
       {showImage && (
         <img
-          src={apiCoverUrl}
+          src={coverUrl}
           alt={title}
           className="absolute inset-0 w-full h-full object-cover"
           onError={() => setImageError(true)}
