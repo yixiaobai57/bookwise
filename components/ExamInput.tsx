@@ -16,7 +16,6 @@ export function ExamInput({ onComplete }: ExamInputProps) {
   const [error, setError] = useState("");
 
   const examData = examMappingData as ExamMapping[];
-
   const selectedExamData = examData.find((e) => e.exam === selectedExam);
 
   const handleSubmit = () => {
@@ -69,57 +68,73 @@ export function ExamInput({ onComplete }: ExamInputProps) {
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
-      className="w-full max-w-md mx-auto text-center py-12"
+      className="w-full max-w-md mx-auto"
     >
-      <h2 className="text-2xl font-bold mb-4">考试成绩映射</h2>
-      <p className="text-muted mb-8">根据你的考试成绩推算词汇量</p>
+      <div className="glass-card rounded-3xl p-8 text-center">
+        <h2 className="text-2xl font-bold mb-2">考试成绩映射</h2>
+        <p className="text-muted mb-8">根据你的考试成绩推算词汇量</p>
 
-      <div className="mb-6">
-        <select
-          value={selectedExam}
-          onChange={(e) => {
-            setSelectedExam(e.target.value);
-            setError("");
-          }}
-          className="w-full px-6 py-4 text-lg border-2 border-border rounded-2xl focus:border-primary-start focus:outline-none transition-colors appearance-none bg-card text-foreground"
-        >
-          <option value="">选择考试类型</option>
-          {examData.map((exam) => (
-            <option key={exam.exam} value={exam.exam}>
-              {exam.label}
-            </option>
-          ))}
-        </select>
-      </div>
-
-      {selectedExamData && (
         <div className="mb-6">
-          <input
-            type="number"
-            value={score}
+          <select
+            value={selectedExam}
             onChange={(e) => {
-              setScore(e.target.value);
+              setSelectedExam(e.target.value);
               setError("");
             }}
-            placeholder={`输入${selectedExamData.label}分数`}
-            step={selectedExamData.exam === "IELTS" ? 0.5 : 1}
-            className="w-full px-6 py-4 text-2xl text-center border-2 border-border rounded-2xl focus:border-primary-start focus:outline-none transition-colors bg-card text-foreground"
-          />
-          <p className="text-sm text-muted mt-2">
-            分数范围：{selectedExamData.scoreRanges[0].min} -{" "}
-            {selectedExamData.scoreRanges[selectedExamData.scoreRanges.length - 1].max}
-          </p>
+            className="input-glow w-full px-6 py-4 text-lg rounded-2xl appearance-none bg-card text-foreground cursor-pointer"
+          >
+            <option value="">选择考试类型</option>
+            {examData.map((exam) => (
+              <option key={exam.exam} value={exam.exam}>
+                {exam.label}
+              </option>
+            ))}
+          </select>
         </div>
-      )}
 
-      {error && <p className="text-red-500 text-sm mb-4">{error}</p>}
+        {selectedExamData && (
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="mb-6"
+          >
+            <input
+              type="number"
+              value={score}
+              onChange={(e) => {
+                setScore(e.target.value);
+                setError("");
+              }}
+              placeholder={`输入${selectedExamData.label}分数`}
+              step={selectedExamData.exam === "IELTS" ? 0.5 : 1}
+              className="input-glow w-full px-6 py-4 text-2xl text-center rounded-2xl bg-card text-foreground"
+            />
+            <p className="text-sm text-muted mt-2">
+              分数范围：{selectedExamData.scoreRanges[0].min} -{" "}
+              {selectedExamData.scoreRanges[selectedExamData.scoreRanges.length - 1].max}
+            </p>
+          </motion.div>
+        )}
 
-      <button
-        onClick={handleSubmit}
-        className="btn-gradient px-8 py-3 rounded-full text-lg font-semibold"
-      >
-        确认 →
-      </button>
+        {error && (
+          <motion.p
+            initial={{ opacity: 0, y: -5 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="text-red-500 text-sm mb-4"
+          >
+            {error}
+          </motion.p>
+        )}
+
+        <motion.button
+          whileHover={{ scale: 1.02 }}
+          whileTap={{ scale: 0.98 }}
+          onClick={handleSubmit}
+          className="btn-gradient px-8 py-3 rounded-2xl text-lg font-semibold w-full"
+        >
+          确认 →
+        </motion.button>
+      </div>
     </motion.div>
   );
 }

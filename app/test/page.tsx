@@ -32,12 +32,12 @@ export default function TestPage() {
   };
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen">
       <div className="max-w-4xl mx-auto px-6 py-12">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.3 }}
+          transition={{ duration: 0.4 }}
           className="text-center mb-12"
         >
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
@@ -48,13 +48,18 @@ export default function TestPage() {
           </p>
         </motion.div>
 
-        <div className="flex justify-center mb-8">
-          <div className="inline-flex bg-accent rounded-2xl p-1.5 border border-border">
+        <motion.div
+          initial={{ opacity: 0, y: 15 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.3, delay: 0.1 }}
+          className="flex justify-center mb-10"
+        >
+          <div className="glass-card inline-flex rounded-2xl p-1.5">
             {tabs.map((tab) => (
               <button
                 key={tab.id}
                 onClick={() => setActiveTab(tab.id)}
-                className={`relative px-4 py-2.5 rounded-xl text-sm font-medium transition-all duration-200 ${
+                className={`relative px-4 md:px-5 py-2.5 rounded-xl text-sm font-medium transition-all duration-200 ${
                   activeTab === tab.id
                     ? "text-white dark:text-slate-900"
                     : "text-muted hover:text-foreground"
@@ -63,18 +68,18 @@ export default function TestPage() {
                 {activeTab === tab.id && (
                   <motion.div
                     layoutId="activeTab"
-                    className="absolute inset-0 bg-gradient-to-r from-primary-start to-primary-end rounded-xl"
+                    className="absolute inset-0 bg-gradient-to-r from-primary-start to-primary-end rounded-xl shadow-md"
                     transition={{ type: "spring", bounce: 0.2, duration: 0.4 }}
                   />
                 )}
                 <span className="relative z-10 flex items-center gap-1.5">
-                  <span>{tab.icon}</span>
+                  <span className="hidden sm:inline">{tab.icon}</span>
                   <span>{tab.label}</span>
                 </span>
               </button>
             ))}
           </div>
-        </div>
+        </motion.div>
 
         <AnimatePresence mode="wait">
           <motion.div

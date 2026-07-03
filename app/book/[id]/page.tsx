@@ -53,7 +53,7 @@ export default function BookDetailPage() {
 
   if (isLoading) {
     return (
-      <div className="min-h-screen bg-background flex items-center justify-center">
+      <div className="min-h-[80vh] flex items-center justify-center">
         <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary-start"></div>
       </div>
     );
@@ -61,17 +61,21 @@ export default function BookDetailPage() {
 
   if (!book) {
     return (
-      <div className="min-h-screen bg-background flex items-center justify-center">
-        <div className="text-center">
+      <div className="min-h-[80vh] flex items-center justify-center">
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          className="glass-card rounded-3xl p-12 text-center max-w-md mx-4"
+        >
           <div className="text-6xl mb-6">😕</div>
           <h1 className="text-3xl font-bold mb-4">未找到书籍</h1>
           <a
             href="/recommend"
-            className="text-primary-start hover:underline"
+            className="btn-gradient inline-block px-8 py-3 rounded-2xl text-lg font-semibold"
           >
             返回推荐列表
           </a>
-        </div>
+        </motion.div>
       </div>
     );
   }
@@ -88,29 +92,32 @@ export default function BookDetailPage() {
   };
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen">
       <div className="max-w-4xl mx-auto px-6 py-12">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.3 }}
+          transition={{ duration: 0.4 }}
         >
           <a
             href="/recommend"
-            className="inline-flex items-center text-muted hover:text-foreground mb-8 transition-colors"
+            className="inline-flex items-center gap-2 text-muted hover:text-foreground mb-8 transition-colors group"
           >
-            ← 返回推荐列表
+            <span className="group-hover:-translate-x-1 transition-transform">←</span>
+            返回推荐列表
           </a>
 
-          <div className="bg-card rounded-3xl shadow-sm border border-border overflow-hidden">
-            <div className="h-64 relative overflow-hidden">
+          <div className="glass-card rounded-3xl overflow-hidden">
+            <div className="h-72 relative overflow-hidden">
               <BookCover
                 title={book.title}
                 author={book.author}
                 category={book.category}
                 coverUrl={book.coverUrl}
-                className="h-64"
+                className="h-72"
               />
+              {/* Enhanced gradient overlay */}
+              <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent pointer-events-none" />
             </div>
 
             <div className="p-8 md:p-12">
@@ -122,30 +129,32 @@ export default function BookDetailPage() {
                   <p className="text-xl text-muted mb-4">{book.titleCN}</p>
                   <p className="text-lg mb-6">{book.author}</p>
 
-                  <div className="flex flex-wrap gap-3 mb-8">
+                  <div className="flex flex-wrap gap-2.5 mb-8">
                     <span
-                      className={`px-3 py-1.5 rounded-full text-sm font-medium ${
+                      className={`px-3 py-1.5 rounded-xl text-sm font-medium ${
                         difficultyColors[book.difficulty] ||
                         "bg-gray-100 text-gray-700 dark:bg-gray-800 dark:text-gray-300"
                       }`}
                     >
                       {book.difficulty}
                     </span>
-                    <span className="px-3 py-1.5 rounded-full text-sm font-medium bg-accent text-muted">
+                    <span className="glass-pill px-3 py-1.5 rounded-xl text-sm font-medium text-muted">
                       {book.category}
                     </span>
-                    <span className="px-3 py-1.5 rounded-full text-sm font-medium bg-accent text-muted">
+                    <span className="glass-pill px-3 py-1.5 rounded-xl text-sm font-medium text-muted">
                       {(book.wordCount / 1000).toFixed(0)}k 词
                     </span>
                   </div>
                 </div>
 
                 <div className="flex flex-col items-center">
-                  <CoverageCircle
-                    coverage={book.coverage}
-                    size={160}
-                    strokeWidth={10}
-                  />
+                  <div className="glass-card rounded-2xl p-4">
+                    <CoverageCircle
+                      coverage={book.coverage}
+                      size={140}
+                      strokeWidth={10}
+                    />
+                  </div>
                   <div className="mt-4 text-center">
                     <div className="text-2xl font-bold">
                       你的词汇覆盖 {coveragePercent}%
@@ -156,46 +165,63 @@ export default function BookDetailPage() {
               </div>
 
               {book.description && (
-                <div className="mt-8 pt-8 border-t border-border">
-                  <h2 className="text-xl font-bold mb-4">📖 书籍简介</h2>
+                <div className="mt-10 pt-8">
+                  <div className="section-divider mb-8" />
+                  <h2 className="text-xl font-bold mb-4 flex items-center gap-2">
+                    <span>📖</span> 书籍简介
+                  </h2>
                   <p className="text-muted leading-relaxed text-base">
                     {book.description}
                   </p>
                 </div>
               )}
 
-              <div className="mt-8 pt-8 border-t border-border">
-                <h2 className="text-xl font-bold mb-4">阅读建议</h2>
-                <div className="bg-accent rounded-2xl p-6">
+              <div className="mt-10 pt-8">
+                <div className="section-divider mb-8" />
+                <h2 className="text-xl font-bold mb-4 flex items-center gap-2">
+                  <span>💡</span> 阅读建议
+                </h2>
+                <motion.div
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.2 }}
+                  className={`glass-card rounded-2xl p-6 ${
+                    coveragePercent >= 80
+                      ? "border-l-4 border-l-coverage-high"
+                      : coveragePercent >= 60
+                      ? "border-l-4 border-l-coverage-mid"
+                      : "border-l-4 border-l-coverage-low"
+                  }`}
+                >
                   {coveragePercent >= 80 ? (
                     <div>
-                      <p className="text-green-700 font-semibold mb-2">
-                        ✅ 推荐阅读
+                      <p className="text-coverage-high font-semibold mb-2 flex items-center gap-2">
+                        <span>✅</span> 推荐阅读
                       </p>
-                      <p className="text-muted">
+                      <p className="text-muted leading-relaxed">
                         这本书的词汇覆盖率达到 {coveragePercent}%，适合你当前的词汇水平。你可以流畅阅读，遇到的生词不会影响理解。
                       </p>
                     </div>
                   ) : coveragePercent >= 60 ? (
                     <div>
-                      <p className="text-yellow-700 font-semibold mb-2">
-                        ⚠️ 有一定挑战
+                      <p className="text-coverage-mid font-semibold mb-2 flex items-center gap-2">
+                        <span>⚠️</span> 有一定挑战
                       </p>
-                      <p className="text-muted">
+                      <p className="text-muted leading-relaxed">
                         这本书的词汇覆盖率为 {coveragePercent}%，会有一定数量的生词。建议配合词典阅读，或先提升词汇量再来挑战。
                       </p>
                     </div>
                   ) : (
                     <div>
-                      <p className="text-red-700 font-semibold mb-2">
-                        ❌ 暂不推荐
+                      <p className="text-coverage-low font-semibold mb-2 flex items-center gap-2">
+                        <span>❌</span> 暂不推荐
                       </p>
-                      <p className="text-muted">
+                      <p className="text-muted leading-relaxed">
                         这本书的词汇覆盖率仅为 {coveragePercent}%，生词较多，阅读体验可能不佳。建议先阅读难度更低的书籍。
                       </p>
                     </div>
                   )}
-                </div>
+                </motion.div>
               </div>
             </div>
           </div>

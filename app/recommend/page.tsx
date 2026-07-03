@@ -79,8 +79,12 @@ export default function RecommendPage() {
 
   if (!vocabularySize && !isLoading) {
     return (
-      <div className="min-h-screen bg-background flex items-center justify-center">
-        <div className="text-center">
+      <div className="min-h-[80vh] flex items-center justify-center">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="glass-card rounded-3xl p-12 text-center max-w-md mx-4"
+        >
           <div className="text-6xl mb-6">📚</div>
           <h1 className="text-3xl font-bold mb-4">请先测试词汇量</h1>
           <p className="text-muted mb-8">
@@ -88,37 +92,42 @@ export default function RecommendPage() {
           </p>
           <a
             href="/test"
-            className="btn-gradient inline-block px-8 py-3 rounded-full text-lg font-semibold"
+            className="btn-gradient inline-block px-8 py-3 rounded-2xl text-lg font-semibold"
           >
             去测试 →
           </a>
-        </div>
+        </motion.div>
       </div>
     );
   }
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen">
       <div className="max-w-6xl mx-auto px-6 py-12">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.3 }}
-          className="mb-8"
+          transition={{ duration: 0.4 }}
+          className="mb-10"
         >
-          <h1 className="text-3xl md:text-4xl font-bold mb-2">
-            为你推荐的书籍
+          <h1 className="text-3xl md:text-4xl font-bold mb-3">
+            为你推荐的<span className="text-gradient">书籍</span>
           </h1>
-          <p className="text-muted">
+          <p className="text-muted text-lg">
             基于你的词汇量{" "}
-            <span className="font-semibold text-foreground">
+            <span className="font-semibold text-foreground glass-pill px-3 py-1 rounded-lg">
               {vocabularySize?.toLocaleString()}
             </span>{" "}
             词，筛选出词汇覆盖率 ≥ 80% 的书籍
           </p>
         </motion.div>
 
-        <div className="mb-8">
+        <motion.div
+          initial={{ opacity: 0, y: 15 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.3, delay: 0.1 }}
+          className="mb-10"
+        >
           <FilterBar
             categories={categories}
             difficulties={difficulties}
@@ -127,7 +136,7 @@ export default function RecommendPage() {
             onCategoryChange={setSelectedCategory}
             onDifficultyChange={setSelectedDifficulty}
           />
-        </div>
+        </motion.div>
 
         {isLoading ? (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -139,7 +148,7 @@ export default function RecommendPage() {
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            className="text-center py-20"
+            className="glass-card rounded-3xl p-16 text-center"
           >
             <div className="text-6xl mb-6">😕</div>
             <h2 className="text-2xl font-bold mb-2">暂无匹配书籍</h2>

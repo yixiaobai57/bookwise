@@ -81,47 +81,59 @@ export function WordlistImport({ onComplete }: WordlistImportProps) {
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
-      className="w-full max-w-md mx-auto text-center py-12"
+      className="w-full max-w-md mx-auto"
     >
-      <h2 className="text-2xl font-bold mb-4">导入单词表</h2>
-      <p className="text-muted mb-8">
-        粘贴你背过的单词，或上传单词文件
-      </p>
+      <div className="glass-card rounded-3xl p-8 text-center">
+        <h2 className="text-2xl font-bold mb-2">导入单词表</h2>
+        <p className="text-muted mb-8">
+          粘贴你背过的单词，或上传单词文件
+        </p>
 
-      <div className="mb-6">
-        <textarea
-          value={text}
-          onChange={(e) => {
-            setText(e.target.value);
-            setError("");
-          }}
-          placeholder="粘贴英文单词列表，用空格、换行或逗号分隔..."
-          rows={6}
-          className="w-full px-6 py-4 border-2 border-border rounded-2xl focus:border-primary-start focus:outline-none transition-colors resize-none bg-card text-foreground"
-        />
-      </div>
-
-      <div className="mb-6">
-        <label className="block">
-          <span className="sr-only">选择文件</span>
-          <input
-            type="file"
-            accept=".txt,.csv,.tsv"
-            onChange={handleFileUpload}
-            className="block w-full text-sm text-muted file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-primary-start/10 file:text-primary-start hover:file:bg-primary-start/20"
+        <div className="mb-6">
+          <textarea
+            value={text}
+            onChange={(e) => {
+              setText(e.target.value);
+              setError("");
+            }}
+            placeholder="粘贴英文单词列表，用空格、换行或逗号分隔..."
+            rows={6}
+            className="input-glow w-full px-6 py-4 rounded-2xl resize-none bg-card text-foreground"
           />
-        </label>
+        </div>
+
+        <div className="mb-6">
+          <label className="block">
+            <span className="sr-only">选择文件</span>
+            <input
+              type="file"
+              accept=".txt,.csv,.tsv"
+              onChange={handleFileUpload}
+              className="block w-full text-sm text-muted file:mr-4 file:py-2.5 file:px-4 file:rounded-xl file:border-0 file:text-sm file:font-semibold file:bg-primary-start/10 file:text-primary-start hover:file:bg-primary-start/20 transition-colors"
+            />
+          </label>
+        </div>
+
+        {error && (
+          <motion.p
+            initial={{ opacity: 0, y: -5 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="text-red-500 text-sm mb-4"
+          >
+            {error}
+          </motion.p>
+        )}
+
+        <motion.button
+          whileHover={{ scale: 1.02 }}
+          whileTap={{ scale: 0.98 }}
+          onClick={handleSubmit}
+          disabled={isProcessing}
+          className="btn-gradient px-8 py-3 rounded-2xl text-lg font-semibold w-full disabled:opacity-50"
+        >
+          {isProcessing ? "处理中..." : "确认 →"}
+        </motion.button>
       </div>
-
-      {error && <p className="text-red-500 text-sm mb-4">{error}</p>}
-
-      <button
-        onClick={handleSubmit}
-        disabled={isProcessing}
-        className="btn-gradient px-8 py-3 rounded-full text-lg font-semibold disabled:opacity-50"
-      >
-        {isProcessing ? "处理中..." : "确认 →"}
-      </button>
     </motion.div>
   );
 }

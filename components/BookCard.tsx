@@ -24,42 +24,47 @@ export function BookCard({ book, index = 0 }: BookCardProps) {
       href={`/book/${book.id}`}
       initial={{ opacity: 0, y: 30 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.4, delay: index * 0.1, ease: "easeOut" }}
+      transition={{ duration: 0.4, delay: index * 0.08, ease: "easeOut" }}
       whileHover={{ y: -6 }}
-      className="block bg-card rounded-2xl shadow-sm border border-border hover:shadow-lg transition-all duration-300 overflow-hidden group"
+      className="glass-card rounded-3xl overflow-hidden group cursor-pointer block"
     >
-      <div className="h-48 relative overflow-hidden">
+      <div className="h-52 relative overflow-hidden">
         <BookCover
           title={book.title}
           author={book.author}
           category={book.category}
           coverUrl={book.coverUrl}
-          className="h-48 group-hover:scale-105 transition-transform duration-300"
+          className="h-52 group-hover:scale-105 transition-transform duration-500"
         />
+        {/* Bottom gradient overlay */}
+        <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-black/40 to-transparent pointer-events-none" />
       </div>
 
       <div className="p-6">
         <div className="flex items-start justify-between mb-3">
           <div className="flex-1 min-w-0 mr-3">
-            <h3 className="font-semibold text-lg truncate group-hover:text-primary-start transition-colors">
+            <h3 className="font-semibold text-lg truncate group-hover:text-primary-start transition-colors duration-300">
               {book.title}
             </h3>
-            <p className="text-muted text-sm truncate">{book.titleCN}</p>
+            <p className="text-muted text-sm truncate mt-0.5">
+              {book.titleCN}
+            </p>
           </div>
           <CoverageCircle coverage={book.coverage} size={56} />
         </div>
 
-        <p className="text-muted text-sm mb-3">{book.author}</p>
+        <p className="text-muted text-sm mb-4">{book.author}</p>
 
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-2 flex-wrap">
           <span
-            className={`px-2 py-1 rounded-full text-xs font-medium ${
-              difficultyColors[book.difficulty] || "bg-gray-100 text-gray-700"
+            className={`px-2.5 py-1 rounded-lg text-xs font-medium ${
+              difficultyColors[book.difficulty] ||
+              "bg-gray-100 text-gray-700"
             }`}
           >
             {book.difficulty}
           </span>
-          <span className="px-2 py-1 rounded-full text-xs font-medium bg-accent text-muted">
+          <span className="glass-pill px-2.5 py-1 rounded-lg text-xs font-medium text-muted">
             {book.category}
           </span>
           <span className="text-xs text-muted ml-auto">

@@ -20,9 +20,9 @@ export function FilterBar({
   onDifficultyChange,
 }: FilterBarProps) {
   return (
-    <div className="space-y-4">
+    <div className="glass-card rounded-2xl p-5 space-y-4">
       <div>
-        <h3 className="text-sm font-medium text-muted mb-2">分类</h3>
+        <h3 className="text-sm font-medium text-muted mb-3 px-1">分类</h3>
         <div className="flex flex-wrap gap-2">
           <FilterPill
             label="全部"
@@ -40,8 +40,10 @@ export function FilterBar({
         </div>
       </div>
 
+      <div className="section-divider" />
+
       <div>
-        <h3 className="text-sm font-medium text-muted mb-2">难度</h3>
+        <h3 className="text-sm font-medium text-muted mb-3 px-1">难度</h3>
         <div className="flex flex-wrap gap-2">
           <FilterPill
             label="全部"
@@ -73,13 +75,13 @@ function FilterPill({
 }) {
   return (
     <motion.button
-      whileHover={{ scale: 1.02 }}
-      whileTap={{ scale: 0.98 }}
+      whileHover={{ scale: 1.03 }}
+      whileTap={{ scale: 0.97 }}
       onClick={onClick}
-      className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
+      className={`px-4 py-2 rounded-xl text-sm font-medium transition-all duration-250 ${
         active
-          ? "bg-gradient-to-r from-primary-start to-primary-end text-white dark:text-slate-900 shadow-sm"
-          : "bg-card text-muted border border-border hover:border-primary-start/30"
+          ? "glass-pill-active"
+          : "glass-pill text-muted hover:text-foreground"
       }`}
     >
       {label}
