@@ -1,9 +1,8 @@
-import { Book, CocabEntry } from "./types";
+import { Book } from "./types";
 
 export function calculateCoverage(
   book: Book,
-  vocabularySize: number,
-  _cocaList: CocabEntry[]
+  vocabularySize: number
 ): number {
   if (!book.wordFrequencyDistribution) return 0.5;
 
