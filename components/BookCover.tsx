@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 
 const categoryStyles: Record<
   string,
@@ -87,12 +88,13 @@ export function BookCover({
       className={`relative bg-gradient-to-br ${style.bg} flex flex-col overflow-hidden ${className} shadow-lg`}
     >
       {showImage && (
-        <img
+        <Image
           src={coverUrl}
           alt={title}
-          className="absolute inset-0 w-full h-full object-cover"
+          fill
+          className="object-cover"
           onError={() => setImageError(true)}
-          loading="lazy"
+          sizes="(max-width: 768px) 100vw, 33vw"
         />
       )}
 
