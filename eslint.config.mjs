@@ -15,10 +15,8 @@ const eslintConfig = defineConfig([
     // Additional ignores:
     "scripts/**",
     ".open-next/**",
-    // Nested bookwise/ subdirectory:
-    "bookwise/scripts/**",
-    "bookwise/.open-next/**",
-    "bookwise/.next/**",
+    // Nested bookwise/ subdirectory (complete project copy):
+    "bookwise/**",
   ]),
 ]);
 
