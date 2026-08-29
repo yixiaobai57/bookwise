@@ -4,9 +4,10 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "node scripts/download-covers.js && next build",
+    "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "download-covers": "node scripts/download-covers.js"
   },
   "dependencies": {
     "compromise": "^14.15.1",
