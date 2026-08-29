@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { useParams } from "next/navigation";
 import { motion } from "framer-motion";
 import { BookRecommendation } from "@/lib/types";
@@ -14,42 +14,43 @@ export default function BookDetailPage() {
   const bookId = params.id as string;
   const [book, setBook] = useState<BookRecommendation | null>(null);
   const [isLoading, setIsLoading] = useState(true);
-  const [vocabularySize, setVocabularySize] = useState<number | null>(null);
+
+  const fetchBookDetail = useCallback(
+    async (vocabSize: number) => {
+      try {
+        const response = await fetch("/api/recommend", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            vocabularySize: vocabSize,
+            targetCoverage: 0,
+          }),
+        });
+
+        if (!response.ok) throw new Error("Failed to fetch");
+
+        const data = await response.json();
+        const found = data.recommendations.find(
+          (b: BookRecommendation) => b.id === bookId
+        );
+        setBook(found || null);
+      } catch (error) {
+        console.error("Error fetching book detail:", error);
+      } finally {
+        setIsLoading(false);
+      }
+    },
+    [bookId]
+  );
 
   useEffect(() => {
     const vocab = loadVocabulary();
     if (vocab) {
-      setVocabularySize(vocab.vocabularySize);
       fetchBookDetail(vocab.vocabularySize);
     } else {
       setIsLoading(false);
     }
-  }, []);
-
-  const fetchBookDetail = async (vocabSize: number) => {
-    try {
-      const response = await fetch("/api/recommend", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          vocabularySize: vocabSize,
-          targetCoverage: 0,
-        }),
-      });
-
-      if (!response.ok) throw new Error("Failed to fetch");
-
-      const data = await response.json();
-      const found = data.recommendations.find(
-        (b: BookRecommendation) => b.id === bookId
-      );
-      setBook(found || null);
-    } catch (error) {
-      console.error("Error fetching book detail:", error);
-    } finally {
-      setIsLoading(false);
-    }
-  };
+  }, [fetchBookDetail]);
 
   if (isLoading) {
     return (
