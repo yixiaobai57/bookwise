@@ -1,10 +1,8 @@
-import { Book, BookRecommendation, CocabEntry } from "./types";
+import { Book, BookRecommendation } from "./types";
 import { calculateCoverage } from "./coverage";
 import booksData from "@/data/books.json";
-import cocaData from "@/data/coca-frequency.json";
 
 const books = booksData as unknown as Book[];
-const cocaList = cocaData as CocabEntry[];
 
 export function getRecommendations(
   vocabularySize: number,
@@ -16,7 +14,7 @@ export function getRecommendations(
     title: book.title,
     titleCN: book.titleCN,
     author: book.author,
-    coverage: calculateCoverage(book, vocabularySize, cocaList),
+    coverage: calculateCoverage(book, vocabularySize),
     category: book.category,
     difficulty: book.difficulty,
     wordCount: book.wordCount,
@@ -44,7 +42,7 @@ export function getAllRecommendations(
     title: book.title,
     titleCN: book.titleCN,
     author: book.author,
-    coverage: calculateCoverage(book, vocabularySize, cocaList),
+    coverage: calculateCoverage(book, vocabularySize),
     category: book.category,
     difficulty: book.difficulty,
     wordCount: book.wordCount,
