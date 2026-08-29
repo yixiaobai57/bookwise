@@ -140,7 +140,6 @@ export function estimateVocabularySize(
   estimatedSize = Math.max(1000, Math.min(estimatedSize, 20000));
 
   const totalAnswers = knownRanks.length + unknownRanks.length;
-  const knownRatio = knownRanks.length / totalAnswers;
   const hasUnknown = unknownRanks.length > 0;
   const variance = hasUnknown
     ? Math.abs(highestKnownRank - lowestUnknownRank)
