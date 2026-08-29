@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo, useCallback } from "react";
 import { motion } from "framer-motion";
 import { BookRecommendation } from "@/lib/types";
 import { BookCard } from "@/components/BookCard";
@@ -9,9 +9,6 @@ import { SkeletonCard } from "@/components/SkeletonCard";
 import { loadVocabulary } from "@/lib/storage";
 
 export default function RecommendPage() {
-  const [recommendations, setRecommendations] = useState<BookRecommendation[]>(
-    []
-  );
   const [allBooks, setAllBooks] = useState<BookRecommendation[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [vocabularySize, setVocabularySize] = useState<number | null>(null);
@@ -20,17 +17,7 @@ export default function RecommendPage() {
   const [categories, setCategories] = useState<string[]>([]);
   const [difficulties, setDifficulties] = useState<string[]>([]);
 
-  useEffect(() => {
-    const vocab = loadVocabulary();
-    if (vocab) {
-      setVocabularySize(vocab.vocabularySize);
-      fetchRecommendations(vocab.vocabularySize);
-    } else {
-      setIsLoading(false);
-    }
-  }, []);
-
-  const fetchRecommendations = async (vocabSize: number) => {
+  const fetchRecommendations = useCallback(async (vocabSize: number) => {
     setIsLoading(true);
     try {
       const response = await fetch("/api/recommend", {
@@ -45,7 +32,6 @@ export default function RecommendPage() {
       if (!response.ok) throw new Error("Failed to fetch");
 
       const data = await response.json();
-      setRecommendations(data.recommendations);
       setAllBooks(data.recommendations);
 
       const cats = Array.from(
@@ -64,9 +50,19 @@ export default function RecommendPage() {
     } finally {
       setIsLoading(false);
     }
-  };
+  }, []);
 
   useEffect(() => {
+    const vocab = loadVocabulary();
+    if (vocab) {
+      setVocabularySize(vocab.vocabularySize);
+      fetchRecommendations(vocab.vocabularySize);
+    } else {
+      setIsLoading(false);
+    }
+  }, [fetchRecommendations]);
+
+  const recommendations = useMemo(() => {
     let filtered = allBooks;
     if (selectedCategory) {
       filtered = filtered.filter((b) => b.category === selectedCategory);
@@ -74,7 +70,7 @@ export default function RecommendPage() {
     if (selectedDifficulty) {
       filtered = filtered.filter((b) => b.difficulty === selectedDifficulty);
     }
-    setRecommendations(filtered);
+    return filtered;
   }, [selectedCategory, selectedDifficulty, allBooks]);
 
   if (!vocabularySize && !isLoading) {

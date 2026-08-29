@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useCallback } from "react";
+import { useState, useMemo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { CocabEntry, TestSession } from "@/lib/types";
 import {
@@ -17,8 +17,7 @@ interface VocabularyTestProps {
 }
 
 export function VocabularyTest({ onComplete }: VocabularyTestProps) {
-  const [session, setSession] = useState<TestSession>(createTestSession());
-  const [currentWord, setCurrentWord] = useState<CocabEntry | null>(null);
+  const [session, setSession] = useState<TestSession>(() => createTestSession());
   const [isLoading, setIsLoading] = useState(false);
   const [isComplete, setIsComplete] = useState(false);
   const [result, setResult] = useState<{
@@ -26,17 +25,10 @@ export function VocabularyTest({ onComplete }: VocabularyTestProps) {
     confidence: number;
   } | null>(null);
 
-  const loadNextWord = useCallback(
-    (currentSession: TestSession) => {
-      const nextWord = selectNextWord(currentSession, cocaData as CocabEntry[]);
-      setCurrentWord(nextWord);
-    },
-    []
+  const currentWord = useMemo(
+    () => selectNextWord(session, cocaData as CocabEntry[]),
+    [session]
   );
-
-  useEffect(() => {
-    loadNextWord(session);
-  }, [session, loadNextWord]);
 
   const handleAnswer = async (known: boolean) => {
     if (!currentWord || isLoading) return;
@@ -54,8 +46,6 @@ export function VocabularyTest({ onComplete }: VocabularyTestProps) {
       setResult(estimate);
       setIsComplete(true);
       onComplete(estimate.size);
-    } else {
-      loadNextWord(newSession);
     }
 
     setIsLoading(false);
